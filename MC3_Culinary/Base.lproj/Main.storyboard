@@ -30,7 +30,7 @@
         <!--Bookmark-->
         <scene sceneID="BfZ-DJ-ljP">
             <objects>
-                <viewController id="ZEP-BA-fih" sceneMemberID="viewController">
+                <viewController id="ZEP-BA-fih" customClass="BookmarkViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5cz-1j-tmg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
         <!--Search-->
         <scene sceneID="VnE-lb-gmX">
             <objects>
-                <viewController id="3sI-86-bOP" sceneMemberID="viewController">
+                <viewController id="3sI-86-bOP" customClass="SearchViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTR-Nx-GzE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +96,7 @@
         <!--Discover-->
         <scene sceneID="nqP-bt-mfU">
             <objects>
-                <viewController id="HU6-MW-j2o" sceneMemberID="viewController">
+                <viewController id="HU6-MW-j2o" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQ2-pf-NyB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
         <!--Add Food-->
         <scene sceneID="48z-NO-Qwb">
             <objects>
-                <viewController title="Add Food" id="IpH-bh-3Bz" sceneMemberID="viewController">
+                <viewController title="Add Food" id="IpH-bh-3Bz" customClass="AddFoodViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="euV-xI-I83">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

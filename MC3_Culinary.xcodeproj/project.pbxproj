@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		FE750955230B905700CFA516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE750954230B905700CFA516 /* AppDelegate.swift */; };
-		FE750957230B905700CFA516 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE750956230B905700CFA516 /* ViewController.swift */; };
 		FE75095A230B905700CFA516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE750958230B905700CFA516 /* Main.storyboard */; };
 		FE75095D230B905700CFA516 /* MC3_Culinary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE75095B230B905700CFA516 /* MC3_Culinary.xcdatamodeld */; };
 		FE75095F230B905900CFA516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75095E230B905900CFA516 /* Assets.xcassets */; };
 		FE750962230B905900CFA516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE750960230B905900CFA516 /* LaunchScreen.storyboard */; };
+		FE75096A230BB15F00CFA516 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE750969230BB15F00CFA516 /* DiscoverViewController.swift */; };
+		FE75096C230BB18300CFA516 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75096B230BB18300CFA516 /* BookmarkViewController.swift */; };
+		FE75096E230BB19400CFA516 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75096D230BB19400CFA516 /* SearchViewController.swift */; };
+		FE750970230BB1A400CFA516 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75096F230BB1A400CFA516 /* AddFoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE750951230B905700CFA516 /* MC3_Culinary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Culinary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE750954230B905700CFA516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE750956230B905700CFA516 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE750959230B905700CFA516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE75095C230B905700CFA516 /* MC3_Culinary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MC3_Culinary.xcdatamodel; sourceTree = "<group>"; };
 		FE75095E230B905900CFA516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE750961230B905900CFA516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE750963230B905900CFA516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE750969230BB15F00CFA516 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		FE75096B230BB18300CFA516 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		FE75096D230BB19400CFA516 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FE75096F230BB1A400CFA516 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				FE750954230B905700CFA516 /* AppDelegate.swift */,
-				FE750956230B905700CFA516 /* ViewController.swift */,
 				FE750958230B905700CFA516 /* Main.storyboard */,
+				FE75096D230BB19400CFA516 /* SearchViewController.swift */,
+				FE75096F230BB1A400CFA516 /* AddFoodViewController.swift */,
+				FE75096B230BB18300CFA516 /* BookmarkViewController.swift */,
+				FE750969230BB15F00CFA516 /* DiscoverViewController.swift */,
 				FE75095E230B905900CFA516 /* Assets.xcassets */,
 				FE750960230B905900CFA516 /* LaunchScreen.storyboard */,
 				FE750963230B905900CFA516 /* Info.plist */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE750957230B905700CFA516 /* ViewController.swift in Sources */,
+				FE750970230BB1A400CFA516 /* AddFoodViewController.swift in Sources */,
+				FE75096E230BB19400CFA516 /* SearchViewController.swift in Sources */,
+				FE75096A230BB15F00CFA516 /* DiscoverViewController.swift in Sources */,
 				FE75095D230B905700CFA516 /* MC3_Culinary.xcdatamodeld in Sources */,
 				FE750955230B905700CFA516 /* AppDelegate.swift in Sources */,
+				FE75096C230BB18300CFA516 /* BookmarkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
