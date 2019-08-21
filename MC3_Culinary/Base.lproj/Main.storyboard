@@ -86,34 +86,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="HU6-MW-j2o" kind="relationship" relationship="rootViewController" id="fMa-qa-gjm"/>
+                        <segue destination="XgJ-Vl-RRd" kind="relationship" relationship="rootViewController" id="xxC-bC-qqR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDb-Dr-seE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-530" y="-755"/>
-        </scene>
-        <!--Discover-->
-        <scene sceneID="nqP-bt-mfU">
-            <objects>
-                <viewController id="HU6-MW-j2o" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YQ2-pf-NyB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8Ef-cg-V76"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Discover" id="SCk-zW-IhY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JrN-hn-pkM">
-                            <connections>
-                                <segue destination="IpH-bh-3Bz" kind="show" id="FCi-jm-sLX"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EEs-gl-yIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="263.768115942029" y="-755.35714285714278"/>
         </scene>
         <!--Add Food-->
         <scene sceneID="48z-NO-Qwb">
@@ -255,5 +233,81 @@
             </objects>
             <point key="canvasLocation" x="-1451" y="93"/>
         </scene>
+        <!--Discover-->
+        <scene sceneID="aPu-8C-fOf">
+            <objects>
+                <viewController id="XgJ-Vl-RRd" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MW2-4u-AYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nzP-06-EFO">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <collectionViewLayout key="collectionViewLayout" id="wdC-kt-ON8" customClass="PinterestLayout" customModule="MC3_Culinary" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="831-Ms-1Fn">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-AM-KEj">
+                                                    <rect key="frame" x="-80" y="-45" width="280" height="168"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bN7-NN-uGc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ePS-AM-KEj" secondAttribute="bottom" id="ABu-cD-jLz"/>
+                                            <constraint firstItem="ePS-AM-KEj" firstAttribute="top" secondItem="831-Ms-1Fn" secondAttribute="top" id="GG5-9g-X8X"/>
+                                            <constraint firstItem="ePS-AM-KEj" firstAttribute="leading" secondItem="831-Ms-1Fn" secondAttribute="leading" id="YVk-Nh-beh"/>
+                                            <constraint firstAttribute="trailing" secondItem="ePS-AM-KEj" secondAttribute="trailing" id="Ysc-kJ-A6x"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XgJ-Vl-RRd" id="Wqw-Al-N1v"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nzP-06-EFO" firstAttribute="top" secondItem="wts-lN-u30" secondAttribute="top" id="Fz0-8F-yCz"/>
+                            <constraint firstItem="nzP-06-EFO" firstAttribute="bottom" secondItem="wts-lN-u30" secondAttribute="bottom" id="JqZ-Ih-Rlt"/>
+                            <constraint firstItem="nzP-06-EFO" firstAttribute="trailing" secondItem="wts-lN-u30" secondAttribute="trailing" id="eps-se-JZN"/>
+                            <constraint firstItem="nzP-06-EFO" firstAttribute="leading" secondItem="wts-lN-u30" secondAttribute="leading" id="oSR-Ck-I1d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wts-lN-u30"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Discover" id="4h1-md-9yh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lKD-gr-TFR">
+                            <connections>
+                                <segue destination="IpH-bh-3Bz" kind="show" id="e6l-ER-iGX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="nzP-06-EFO" id="xnb-wE-0P3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnB-5a-Z68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="-755"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="16" height="16"/>
+    </resources>
 </document>

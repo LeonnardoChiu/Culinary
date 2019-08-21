@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+class ProvinceModel{
+    var name : String?
+    var locationImage : UIImage?
+    var listOfCity : [CityModel]?
+    
+    init() {
+        return
+    }
+}
