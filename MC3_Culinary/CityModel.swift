@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class CityModel{
+    var name : String?
+    var province : ProvinceModel?
+    var listOfFood : [CityModel]?
+    
+    init() {
+        return
+    }
+}
