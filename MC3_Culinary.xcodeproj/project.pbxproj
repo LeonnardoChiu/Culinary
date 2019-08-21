@@ -11,6 +11,7 @@
 		973C212A230BB755000E0ECC /* ProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2129230BB754000E0ECC /* ProvinceModel.swift */; };
 		973C212C230BB768000E0ECC /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C212B230BB768000E0ECC /* CityModel.swift */; };
 		973C212E230BB77C000E0ECC /* BookmarkedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C212D230BB77C000E0ECC /* BookmarkedModel.swift */; };
+		A3F5B68E230CE6670033D15C /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B68D230CE6670033D15C /* PinterestLayout.swift */; };
 		FE750955230B905700CFA516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE750954230B905700CFA516 /* AppDelegate.swift */; };
 		FE75095A230B905700CFA516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE750958230B905700CFA516 /* Main.storyboard */; };
 		FE75095D230B905700CFA516 /* MC3_Culinary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE75095B230B905700CFA516 /* MC3_Culinary.xcdatamodeld */; };
@@ -27,6 +28,7 @@
 		973C2129230BB754000E0ECC /* ProvinceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceModel.swift; sourceTree = "<group>"; };
 		973C212B230BB768000E0ECC /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		973C212D230BB77C000E0ECC /* BookmarkedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedModel.swift; sourceTree = "<group>"; };
+		A3F5B68D230CE6670033D15C /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		FE750951230B905700CFA516 /* MC3_Culinary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Culinary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE750954230B905700CFA516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE750959230B905700CFA516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				FE75096F230BB1A400CFA516 /* AddFoodViewController.swift */,
 				FE75096B230BB18300CFA516 /* BookmarkViewController.swift */,
 				FE750969230BB15F00CFA516 /* DiscoverViewController.swift */,
+				A3F5B68D230CE6670033D15C /* PinterestLayout.swift */,
 				FE75095E230B905900CFA516 /* Assets.xcassets */,
 				FE750960230B905900CFA516 /* LaunchScreen.storyboard */,
 				FE750963230B905900CFA516 /* Info.plist */,
@@ -166,6 +169,7 @@
 				973C212E230BB77C000E0ECC /* BookmarkedModel.swift in Sources */,
 				973C2128230BB741000E0ECC /* TraditionalFoodModel.swift in Sources */,
 				973C212A230BB755000E0ECC /* ProvinceModel.swift in Sources */,
+				A3F5B68E230CE6670033D15C /* PinterestLayout.swift in Sources */,
 				FE750955230B905700CFA516 /* AppDelegate.swift in Sources */,
 				FE75096C230BB18300CFA516 /* BookmarkViewController.swift in Sources */,
 				973C212C230BB768000E0ECC /* CityModel.swift in Sources */,
