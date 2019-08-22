@@ -9,16 +9,12 @@
 import Foundation
 import UIKit
 
-class TraditionalFoodModel{
+struct TraditionalFoodModel{
     var name: String?
-    var origin: CityModel?
-    var image: UIImage?
+//    var origin: CityModel?
+    var image: String?
     var funFact: String?
     var Ingredient: String?
     var method: String?
-    
-    init() {
-        return
-    }
     
 }

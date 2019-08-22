@@ -12,10 +12,12 @@
 		973C212C230BB768000E0ECC /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C212B230BB768000E0ECC /* CityModel.swift */; };
 		973C212E230BB77C000E0ECC /* BookmarkedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C212D230BB77C000E0ECC /* BookmarkedModel.swift */; };
 		A3F5B68E230CE6670033D15C /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B68D230CE6670033D15C /* PinterestLayout.swift */; };
+		A3F5B695230CEB740033D15C /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B693230CEB740033D15C /* HomeCell.swift */; };
+		A3F5B696230CEB740033D15C /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F5B694230CEB740033D15C /* HomeCell.xib */; };
+		A3F5B69B230D1AC50033D15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F5B69A230D1AC50033D15C /* Assets.xcassets */; };
 		FE750955230B905700CFA516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE750954230B905700CFA516 /* AppDelegate.swift */; };
 		FE75095A230B905700CFA516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE750958230B905700CFA516 /* Main.storyboard */; };
 		FE75095D230B905700CFA516 /* MC3_Culinary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE75095B230B905700CFA516 /* MC3_Culinary.xcdatamodeld */; };
-		FE75095F230B905900CFA516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75095E230B905900CFA516 /* Assets.xcassets */; };
 		FE750962230B905900CFA516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE750960230B905900CFA516 /* LaunchScreen.storyboard */; };
 		FE75096A230BB15F00CFA516 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE750969230BB15F00CFA516 /* DiscoverViewController.swift */; };
 		FE75096C230BB18300CFA516 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75096B230BB18300CFA516 /* BookmarkViewController.swift */; };
@@ -29,11 +31,13 @@
 		973C212B230BB768000E0ECC /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		973C212D230BB77C000E0ECC /* BookmarkedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedModel.swift; sourceTree = "<group>"; };
 		A3F5B68D230CE6670033D15C /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		A3F5B693230CEB740033D15C /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		A3F5B694230CEB740033D15C /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		A3F5B69A230D1AC50033D15C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE750951230B905700CFA516 /* MC3_Culinary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3_Culinary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE750954230B905700CFA516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE750959230B905700CFA516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE75095C230B905700CFA516 /* MC3_Culinary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MC3_Culinary.xcdatamodel; sourceTree = "<group>"; };
-		FE75095E230B905900CFA516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE750961230B905900CFA516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE750963230B905900CFA516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE750969230BB15F00CFA516 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3F5B699230CFD900033D15C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				FE750969230BB15F00CFA516 /* DiscoverViewController.swift */,
+				A3F5B68D230CE6670033D15C /* PinterestLayout.swift */,
+				A3F5B693230CEB740033D15C /* HomeCell.swift */,
+				A3F5B694230CEB740033D15C /* HomeCell.xib */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		FE750948230B905700CFA516 = {
 			isa = PBXGroup;
 			children = (
@@ -72,18 +87,17 @@
 		FE750953230B905700CFA516 /* MC3_Culinary */ = {
 			isa = PBXGroup;
 			children = (
+				A3F5B699230CFD900033D15C /* Layout */,
 				FE750954230B905700CFA516 /* AppDelegate.swift */,
 				973C2127230BB741000E0ECC /* TraditionalFoodModel.swift */,
 				973C2129230BB754000E0ECC /* ProvinceModel.swift */,
+				A3F5B69A230D1AC50033D15C /* Assets.xcassets */,
 				973C212B230BB768000E0ECC /* CityModel.swift */,
 				973C212D230BB77C000E0ECC /* BookmarkedModel.swift */,
 				FE750958230B905700CFA516 /* Main.storyboard */,
 				FE75096D230BB19400CFA516 /* SearchViewController.swift */,
 				FE75096F230BB1A400CFA516 /* AddFoodViewController.swift */,
 				FE75096B230BB18300CFA516 /* BookmarkViewController.swift */,
-				FE750969230BB15F00CFA516 /* DiscoverViewController.swift */,
-				A3F5B68D230CE6670033D15C /* PinterestLayout.swift */,
-				FE75095E230B905900CFA516 /* Assets.xcassets */,
 				FE750960230B905900CFA516 /* LaunchScreen.storyboard */,
 				FE750963230B905900CFA516 /* Info.plist */,
 				FE75095B230B905700CFA516 /* MC3_Culinary.xcdatamodeld */,
@@ -150,7 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE750962230B905900CFA516 /* LaunchScreen.storyboard in Resources */,
-				FE75095F230B905900CFA516 /* Assets.xcassets in Resources */,
+				A3F5B696230CEB740033D15C /* HomeCell.xib in Resources */,
+				A3F5B69B230D1AC50033D15C /* Assets.xcassets in Resources */,
 				FE75095A230B905700CFA516 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +187,7 @@
 				A3F5B68E230CE6670033D15C /* PinterestLayout.swift in Sources */,
 				FE750955230B905700CFA516 /* AppDelegate.swift in Sources */,
 				FE75096C230BB18300CFA516 /* BookmarkViewController.swift in Sources */,
+				A3F5B695230CEB740033D15C /* HomeCell.swift in Sources */,
 				973C212C230BB768000E0ECC /* CityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
