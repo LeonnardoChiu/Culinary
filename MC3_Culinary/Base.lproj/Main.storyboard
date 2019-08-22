@@ -122,14 +122,74 @@
                     <view key="view" contentMode="scaleToFill" id="XTR-Nx-GzE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Makanan, Lokasi" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3t6-Qw-5ZN">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.94901960780000005" green="0.66666666669999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3sI-86-bOP" id="Y4g-pS-pea"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-N0-EJK">
+                                <rect key="frame" x="0.0" y="196" width="414" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="gKB-yh-tyz" style="IBUITableViewCellStyleDefault" id="jFy-eT-uFT">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jFy-eT-uFT" id="uJh-K2-LhT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gKB-yh-tyz">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3sI-86-bOP" id="KM0-Tb-DJT"/>
+                                    <outlet property="delegate" destination="3sI-86-bOP" id="Iw1-hI-ShR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UEM-N0-EJK" firstAttribute="bottom" secondItem="hn4-ky-h44" secondAttribute="bottom" id="1zU-Rq-VuI"/>
+                            <constraint firstItem="UEM-N0-EJK" firstAttribute="leading" secondItem="hn4-ky-h44" secondAttribute="leading" id="6vr-7m-WBs"/>
+                            <constraint firstItem="3t6-Qw-5ZN" firstAttribute="top" secondItem="hn4-ky-h44" secondAttribute="top" id="RDI-cU-SDq"/>
+                            <constraint firstItem="UEM-N0-EJK" firstAttribute="trailing" secondItem="hn4-ky-h44" secondAttribute="trailing" id="UXp-F0-D2G"/>
+                            <constraint firstItem="3t6-Qw-5ZN" firstAttribute="trailing" secondItem="hn4-ky-h44" secondAttribute="trailing" id="m3j-cE-h1E"/>
+                            <constraint firstItem="3t6-Qw-5ZN" firstAttribute="leading" secondItem="hn4-ky-h44" secondAttribute="leading" id="tQG-ES-1ry"/>
+                            <constraint firstItem="UEM-N0-EJK" firstAttribute="top" secondItem="3t6-Qw-5ZN" secondAttribute="bottom" id="xi6-hW-pW6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hn4-ky-h44"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="4Kv-aT-Yrm"/>
+                    <connections>
+                        <outlet property="searchBar" destination="3t6-Qw-5ZN" id="IeI-P6-sZs"/>
+                        <outlet property="searchDisplayController" destination="zOI-RQ-du6" id="ko8-No-Xnm"/>
+                        <outlet property="tableView" destination="UEM-N0-EJK" id="xx5-1j-F6I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gm-ZT-i9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="zOI-RQ-du6">
+                    <connections>
+                        <outlet property="delegate" destination="3sI-86-bOP" id="Now-aQ-xUe"/>
+                        <outlet property="searchContentsController" destination="3sI-86-bOP" id="h8p-6Y-VTs"/>
+                        <outlet property="searchResultsDataSource" destination="3sI-86-bOP" id="gas-NS-Fms"/>
+                        <outlet property="searchResultsDelegate" destination="3sI-86-bOP" id="GB6-qh-JyC"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="264" y="954"/>
+            <point key="canvasLocation" x="263.768115942029" y="953.57142857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="xEG-5B-6oc">

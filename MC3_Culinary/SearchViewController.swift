@@ -9,7 +9,14 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var locationList = ["Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua"]
+    var searchLocation = [String]()
+    var isSearching = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +34,42 @@ class SearchViewController: UIViewController {
     }
     */
 
+}
+
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSearching {
+            return searchLocation.count
+        }
+        else{
+            return locationList.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if isSearching {
+            cell?.textLabel?.text = searchLocation[indexPath.row]
+        }
+        else{
+            cell?.textLabel?.text = locationList[indexPath.row]
+        }
+        return cell!
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("LAGI SEARCHHHHH")
+        searchLocation = locationList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        isSearching = true
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        searchBar.text = ""
+        tableView.reloadData()
+    }
+    
 }
