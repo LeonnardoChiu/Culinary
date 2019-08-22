@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0871917A230E3D9000BA26DA /* PageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08719179230E3D9000BA26DA /* PageDetailViewController.swift */; };
 		973C2128230BB741000E0ECC /* TraditionalFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2127230BB741000E0ECC /* TraditionalFoodModel.swift */; };
 		973C212A230BB755000E0ECC /* ProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2129230BB754000E0ECC /* ProvinceModel.swift */; };
 		973C212C230BB768000E0ECC /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C212B230BB768000E0ECC /* CityModel.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08719179230E3D9000BA26DA /* PageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailViewController.swift; sourceTree = "<group>"; };
 		973C2127230BB741000E0ECC /* TraditionalFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraditionalFoodModel.swift; sourceTree = "<group>"; };
 		973C2129230BB754000E0ECC /* ProvinceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceModel.swift; sourceTree = "<group>"; };
 		973C212B230BB768000E0ECC /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				FE750960230B905900CFA516 /* LaunchScreen.storyboard */,
 				FE750963230B905900CFA516 /* Info.plist */,
 				FE75095B230B905700CFA516 /* MC3_Culinary.xcdatamodeld */,
+				08719179230E3D9000BA26DA /* PageDetailViewController.swift */,
 			);
 			path = MC3_Culinary;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				973C2128230BB741000E0ECC /* TraditionalFoodModel.swift in Sources */,
 				973C212A230BB755000E0ECC /* ProvinceModel.swift in Sources */,
 				A3F5B68E230CE6670033D15C /* PinterestLayout.swift in Sources */,
+				0871917A230E3D9000BA26DA /* PageDetailViewController.swift in Sources */,
 				FE750955230B905700CFA516 /* AppDelegate.swift in Sources */,
 				FE75096C230BB18300CFA516 /* BookmarkViewController.swift in Sources */,
 				A3F5B695230CEB740033D15C /* HomeCell.swift in Sources */,
