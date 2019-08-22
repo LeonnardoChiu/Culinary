@@ -10,17 +10,19 @@ import UIKit
 
 class DiscoverViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    private var data: [TraditionalFoodModel]?
+    private var provinceData: [ProvinceModel] = [provinceBanten, provinceJakarta, provinceJawaBarat]
+    private var cityData : [CityModel] = []
+    private var foodData : [TraditionalFoodModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        createData()
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
         
         setupCollectionView()
-        data = createData()
+        
     }
     
     private func setupCollectionView() {
@@ -29,17 +31,35 @@ class DiscoverViewController: UIViewController {
         collectionView.register(UINib(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
     }
     
-    private func createData() -> [TraditionalFoodModel] {
-        var data: [TraditionalFoodModel] = []
+    
+    
+    func createData()
+    {
+        for i in 0...provinceData.count-1{
+            for j in 0...provinceData[i].cities.count-1{
+                print(provinceData[i].cities[j].name)
+                cityData.append(provinceData[i].cities[j])
+            }
+        }
         
-        data.append(TraditionalFoodModel(name: "Pancake", image: "placeholder", funFact: "Hello", Ingredient: "Bra", method: "Tst"))
-        data.append(TraditionalFoodModel(name: "Ayam Pong", image: "makanan1", funFact: "hah", Ingredient: "lho", method: "hey"))
-        data.append(TraditionalFoodModel(name: "Nasi Lemak", image: "makanan2", funFact: "lah", Ingredient: "bis", method: "kecil"))
-        data.append(TraditionalFoodModel(name: "Ayam Banten", image: "makanan3", funFact: "wuss", Ingredient: "der", method: "dum"))
-        data.append(TraditionalFoodModel(name: "Ayam Surabaya", image: "makanan4", funFact: "ghost", Ingredient: "aleale", method: "botol"))
+        for i in 0...cityData.count-1{
+            for j in 0...cityData[i].foods.count-1{
+                foodData.append(cityData[i].foods[j])
+            }
+        }
         
-        return data
     }
+//    private func createData() -> [TraditionalFoodModel] {
+//        var data: [TraditionalFoodModel] = []
+//
+//        data.append(TraditionalFoodModel(name: "Pancake", images: ["placeholder"], funFact: "Hello", Ingredient: "Bra", method: "Tst"))
+//        data.append(TraditionalFoodModel(name: "Ayam Pong", images: ["makanan1"], funFact: "hah", Ingredient: "lho", method: "hey"))
+//        data.append(TraditionalFoodModel(name: "Nasi Lemak", images: ["makanan2"], funFact: "lah", Ingredient: "bis", method: "kecil"))
+//        data.append(TraditionalFoodModel(name: "Ayam Banten", images: ["makanan3"], funFact: "wuss", Ingredient: "der", method: "dum"))
+//        data.append(TraditionalFoodModel(name: "Ayam Surabaya", images: ["makanan4"], funFact: "ghost", Ingredient: "aleale", method: "botol"))
+//
+//        return data
+//    }
     
     
     /*
@@ -56,8 +76,9 @@ class DiscoverViewController: UIViewController {
 
 extension DiscoverViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        let food = data![indexPath.row]
-        let image = UIImage(named: food.image!)
+        print(foodData.count)
+        let food = foodData[indexPath.row]
+        let image = UIImage(named: food.images![0])
         let height = image!.size.height
         
         var finalHeight: CGFloat = 0.0
@@ -79,13 +100,13 @@ extension DiscoverViewController: PinterestLayoutDelegate {
 
 extension DiscoverViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data!.count
+        return foodData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
         
-        cell.model = data![indexPath.row]
+        cell.model = foodData[indexPath.row]
         return cell
     }
 }
