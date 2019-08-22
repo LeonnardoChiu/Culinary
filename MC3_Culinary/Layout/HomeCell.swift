@@ -28,6 +28,6 @@ class HomeCell: UICollectionViewCell {
         guard let model = model else { return }
         
         title.text = model.name
-        imageView.image = UIImage(named: model.image ?? "placeholder")
+        imageView.image = UIImage(named: model.images![0] ?? "placeholder")
     }
 }
