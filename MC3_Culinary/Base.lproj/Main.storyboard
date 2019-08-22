@@ -15,8 +15,8 @@
             <objects>
                 <navigationController id="jtt-su-U69" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="auf-kp-T2a"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0Kc-Vy-d7t">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kc-Vy-d7t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -34,14 +34,69 @@
                     <view key="view" contentMode="scaleToFill" id="5cz-1j-tmg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kh6-7E-Pfu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkCell" textLabel="38E-dh-uPz" detailTextLabel="FWt-q5-658" imageView="RJY-Jb-4og" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="Kad-n9-0FN">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kad-n9-0FN" id="Sn5-tN-fb6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="38E-dh-uPz">
+                                                    <rect key="frame" x="97" y="15" width="48.5" height="31.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FWt-q5-658">
+                                                    <rect key="frame" x="97" y="46.5" width="53" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Japong3" id="RJY-Jb-4og">
+                                                    <rect key="frame" x="20" y="0.0" width="62" height="79.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZEP-BA-fih" id="tKv-DC-HZc"/>
+                                    <outlet property="delegate" destination="ZEP-BA-fih" id="fH9-Zm-55y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kh6-7E-Pfu" firstAttribute="leading" secondItem="N8m-m2-ztt" secondAttribute="leading" id="NST-aY-1yT"/>
+                            <constraint firstItem="Kh6-7E-Pfu" firstAttribute="bottom" secondItem="N8m-m2-ztt" secondAttribute="bottom" id="Tuf-mA-rt2"/>
+                            <constraint firstItem="Kh6-7E-Pfu" firstAttribute="top" secondItem="N8m-m2-ztt" secondAttribute="top" id="V9m-lA-85k"/>
+                            <constraint firstItem="Kh6-7E-Pfu" firstAttribute="trailing" secondItem="N8m-m2-ztt" secondAttribute="trailing" id="omA-ik-fh3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N8m-m2-ztt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bookmark" id="iN2-lw-uKV"/>
+                    <navigationItem key="navigationItem" title="Bookmark" id="iN2-lw-uKV">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="NT8-9P-rI0">
+                            <connections>
+                                <action selector="btnEditClicked:" destination="ZEP-BA-fih" id="vkR-WP-NA4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Kh6-7E-Pfu" id="Pdp-kN-QME"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9m-D1-7ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="92"/>
+            <point key="canvasLocation" x="263.768115942029" y="91.741071428571431"/>
         </scene>
         <!--Item-->
         <scene sceneID="BI1-jD-BG7">
@@ -360,4 +415,7 @@
             <point key="canvasLocation" x="311.59420289855075" y="-755.35714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Japong3" width="468" height="601"/>
+    </resources>
 </document>
