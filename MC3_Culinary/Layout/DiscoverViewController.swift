@@ -26,7 +26,7 @@ class DiscoverViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-//        collectionView.delegate = self
+        collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
     }
@@ -48,31 +48,10 @@ class DiscoverViewController: UIViewController {
             }
         }
         
+        foodData.shuffle()
+        
     }
-//    private func createData() -> [TraditionalFoodModel] {
-//        var data: [TraditionalFoodModel] = []
-//
-//        data.append(TraditionalFoodModel(name: "Pancake", images: ["placeholder"], funFact: "Hello", Ingredient: "Bra", method: "Tst"))
-//        data.append(TraditionalFoodModel(name: "Ayam Pong", images: ["makanan1"], funFact: "hah", Ingredient: "lho", method: "hey"))
-//        data.append(TraditionalFoodModel(name: "Nasi Lemak", images: ["makanan2"], funFact: "lah", Ingredient: "bis", method: "kecil"))
-//        data.append(TraditionalFoodModel(name: "Ayam Banten", images: ["makanan3"], funFact: "wuss", Ingredient: "der", method: "dum"))
-//        data.append(TraditionalFoodModel(name: "Ayam Surabaya", images: ["makanan4"], funFact: "ghost", Ingredient: "aleale", method: "botol"))
-//
-//        return data
-//    }
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
 }
 
@@ -100,7 +79,7 @@ extension DiscoverViewController: PinterestLayoutDelegate {
     }
 }
 
-extension DiscoverViewController: UICollectionViewDataSource {
+extension DiscoverViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foodData.count
     }
@@ -110,5 +89,14 @@ extension DiscoverViewController: UICollectionViewDataSource {
         
         cell.model = foodData[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let foodDetail:PageDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageDetailViewController") as! PageDetailViewController
+        
+        foodDetail.model = foodData[indexPath.row]
+        
+        self.navigationController?.pushViewController(foodDetail, animated: true)
     }
 }
