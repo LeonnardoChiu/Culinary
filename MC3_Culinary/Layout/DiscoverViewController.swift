@@ -58,9 +58,14 @@ extension DiscoverViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
         let food = foodData[indexPath.row]
         let image = UIImage(named: food.images![0])
+        let randomHeight = CGFloat.random(in: 200...300)
         var height = image!.size.height
 
-        height = CGFloat.random(in: 200...300)
+        if (height > randomHeight){
+            height = randomHeight
+        } else {
+            height += height / 10
+        }
         
         return height
     }
