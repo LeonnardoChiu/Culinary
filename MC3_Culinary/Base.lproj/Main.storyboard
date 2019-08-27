@@ -624,8 +624,8 @@
                                                     <constraint firstAttribute="width" constant="394" id="yUF-2r-cip"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-LD-tHR">
-                                                <rect key="frame" x="20" y="262.5" width="374" height="16"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jawa Barat" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-LD-tHR">
+                                                <rect key="frame" x="20" y="262.5" width="374" height="273"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -718,7 +718,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="16" height="16"/>
+        <image name="Jawa Barat" width="275" height="273"/>
         <image name="favorite" width="30" height="30"/>
     </resources>
 </document>
