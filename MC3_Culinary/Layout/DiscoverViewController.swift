@@ -60,10 +60,7 @@ extension DiscoverViewController: PinterestLayoutDelegate {
         let image = UIImage(named: food.images![0])
         var height = image!.size.height
 
-        height = 200
-//        if (height > 350) {
-//            height = CGFloat.random(in: 250...350)
-//        }
+        height = CGFloat.random(in: 200...300)
         
         return height
     }
