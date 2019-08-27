@@ -13,14 +13,36 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    private var provinceData: [ProvinceModel] = [provinceBanten, provinceJakarta, provinceJawaBarat]
+    private var cityData : [CityModel] = []
+    private var foodData : [TraditionalFoodModel] = []
+    
     var locationList = ["Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua"]
+    var searchList = [String]()
     var searchLocation = [String]()
     var isSearching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createData()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func createData() {
+        for i in 0...provinceData.count-1{
+            for j in 0...provinceData[i].cities.count-1{
+                cityData.append(provinceData[i].cities[j])
+            }
+        }
+        
+        for i in 0...cityData.count-1{
+            for j in 0...cityData[i].foods.count-1{
+                foodData.append(cityData[i].foods[j])
+                searchList.append(cityData[i].foods[j].name!)
+            }
+        }
+        
     }
     
 
@@ -42,7 +64,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             return searchLocation.count
         }
         else{
-            return locationList.count
+            return searchList.count
         }
     }
     
@@ -52,7 +74,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             cell?.textLabel?.text = searchLocation[indexPath.row]
         }
         else{
-            cell?.textLabel?.text = locationList[indexPath.row]
+            cell?.textLabel?.text = searchList[indexPath.row]
         }
         return cell!
     }
@@ -61,7 +83,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("LAGI SEARCHHHHH")
-        searchLocation = locationList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchLocation = searchList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
         isSearching = true
         tableView.reloadData()
     }
