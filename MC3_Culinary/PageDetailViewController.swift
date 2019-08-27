@@ -32,6 +32,7 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         
         foodNameDetail.text = model?.name
+        foodLocationDetail.text = model?.origin?.name
         factDetail.text = model?.funFact
         ingredientDetail.text = model?.Ingredient
         methodDetail.text = model?.method

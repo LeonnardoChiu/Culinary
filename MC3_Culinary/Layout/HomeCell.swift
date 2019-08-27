@@ -12,7 +12,7 @@ class HomeCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var title: UILabel!
-    
+    @IBOutlet weak var place: UILabel!
     var model: TraditionalFoodModel? {
         didSet {
             self.setupView()
@@ -30,5 +30,7 @@ class HomeCell: UICollectionViewCell {
         title.text = model.name
         imageView.image = UIImage(named: model.images![0] ?? "placeholder")
         imageView.layer.cornerRadius = 8
+        
+        place.text = model.origin?.name
     }
 }

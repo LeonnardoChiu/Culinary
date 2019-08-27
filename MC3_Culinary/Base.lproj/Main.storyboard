@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aBj-nv-HPc">
             <objects>
                 <navigationController id="jtt-su-U69" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="auf-kp-T2a"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="auf-kp-T2a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kc-Vy-d7t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="91.741071428571431"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="BI1-jD-BG7">
             <objects>
                 <navigationController id="Na1-wN-fMH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="OKJ-UG-531"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="OKJ-UG-531"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PTh-T5-Gq5">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -191,11 +191,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="953.57142857142856"/>
         </scene>
-        <!--Item-->
+        <!--Discovery-->
         <scene sceneID="xEG-5B-6oc">
             <objects>
                 <navigationController id="vaa-RF-ZpX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KSR-O5-8Zg"/>
+                    <tabBarItem key="tabBarItem" title="Discovery" image="DiscoverTabBarDisable" id="KSR-O5-8Zg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hm7-44-RMb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -477,7 +477,7 @@
             </objects>
             <point key="canvasLocation" x="311.59420289855075" y="-755.35714285714278"/>
         </scene>
-        <!--Detail-->
+        <!--Page Detail View Controller-->
         <scene sceneID="v4Q-E3-YME">
             <objects>
                 <viewController storyboardIdentifier="PageDetailViewController" id="dnx-XJ-QpJ" customClass="PageDetailViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
@@ -486,7 +486,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjH-To-ex2" userLabel="FoodSlider">
-                                <rect key="frame" x="0.0" y="140" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="250"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJw-zp-GfP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -522,10 +522,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-2c-4ct">
-                                <rect key="frame" x="0.0" y="398" width="414" height="62"/>
+                                <rect key="frame" x="0.0" y="346" width="414" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pancake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-dH-72D" userLabel="FoodName">
-                                        <rect key="frame" x="20" y="8" width="205" height="36"/>
+                                        <rect key="frame" x="20" y="8" width="373" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
@@ -546,10 +546,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGM-AK-kpO">
-                                <rect key="frame" x="0.0" y="468" width="414" height="428"/>
+                                <rect key="frame" x="0.0" y="416" width="414" height="480"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-kd-7Sg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="428"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-nh-lbS" userLabel="FunFact">
                                                 <rect key="frame" x="20" y="9" width="92" height="21"/>
@@ -698,7 +698,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ky0-Pj-r1F"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="qpu-4t-quf">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qpu-4t-quf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ma6-RT-jR6"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="8If-1q-zea"/>
                     </navigationItem>
@@ -714,11 +714,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-DL-3vp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="-376"/>
+            <point key="canvasLocation" x="1253.6231884057972" y="-376.33928571428572"/>
         </scene>
     </scenes>
     <resources>
+        <image name="DiscoverTabBarDisable" width="25" height="25"/>
         <image name="Jawa Barat" width="275" height="273"/>
         <image name="favorite" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
 </document>

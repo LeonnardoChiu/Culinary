@@ -10,10 +10,11 @@ import Foundation
 
 class CityModel{
     var name : String?
-    var foods : [TraditionalFoodModel]
+    var foods : [TraditionalFoodModel]?
+    var province : ProvinceModel
     
-    init(name : String, foods : [TraditionalFoodModel]) {
+    init(name : String, province : ProvinceModel) {
         self.name = name
-        self.foods = foods
+        self.province = province
     }
 }
