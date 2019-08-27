@@ -13,22 +13,28 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCell" id="gTV-IL-0wX" customClass="HomeCell" customModule="MC3_Culinary" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="203"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="237"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="203"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="237"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeC-GJ-vkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="203"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="237"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GXt-Gd-qmL">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="182"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="195"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-wL-ZnQ">
-                                <rect key="frame" x="0.0" y="182" width="150" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="195" width="150" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" red="0.49803921568627452" green="0.16862745098039217" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONL-ce-bi8">
+                                <rect key="frame" x="0.0" y="219" width="150" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" red="0.51764705882352935" green="0.51372549019607838" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -37,10 +43,14 @@
                             <constraint firstItem="Ya8-wL-ZnQ" firstAttribute="top" secondItem="GXt-Gd-qmL" secondAttribute="bottom" id="ISX-i7-PaQ"/>
                             <constraint firstItem="Ya8-wL-ZnQ" firstAttribute="top" secondItem="GXt-Gd-qmL" secondAttribute="bottom" id="KdK-ZZ-YeR"/>
                             <constraint firstItem="GXt-Gd-qmL" firstAttribute="top" secondItem="HeC-GJ-vkJ" secondAttribute="top" id="R6y-Cl-c8T"/>
-                            <constraint firstAttribute="bottom" secondItem="Ya8-wL-ZnQ" secondAttribute="bottom" id="awM-oC-UjS"/>
+                            <constraint firstItem="ONL-ce-bi8" firstAttribute="top" secondItem="Ya8-wL-ZnQ" secondAttribute="bottom" id="Sfj-U9-Cs4"/>
+                            <constraint firstAttribute="bottom" secondItem="ONL-ce-bi8" secondAttribute="bottom" id="Suq-bK-tvj"/>
+                            <constraint firstItem="ONL-ce-bi8" firstAttribute="top" secondItem="Ya8-wL-ZnQ" secondAttribute="bottom" id="aP7-j4-MCX"/>
+                            <constraint firstAttribute="trailing" secondItem="ONL-ce-bi8" secondAttribute="trailing" id="ag2-Nv-tDQ"/>
                             <constraint firstItem="GXt-Gd-qmL" firstAttribute="leading" secondItem="HeC-GJ-vkJ" secondAttribute="leading" id="dUb-se-t1s"/>
                             <constraint firstItem="Ya8-wL-ZnQ" firstAttribute="leading" secondItem="HeC-GJ-vkJ" secondAttribute="leading" id="efm-Of-ujC"/>
                             <constraint firstAttribute="trailing" secondItem="Ya8-wL-ZnQ" secondAttribute="trailing" id="hF2-ye-lSE"/>
+                            <constraint firstItem="ONL-ce-bi8" firstAttribute="leading" secondItem="HeC-GJ-vkJ" secondAttribute="leading" id="x25-Xv-3TH"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -52,12 +62,13 @@
                 <constraint firstItem="HeC-GJ-vkJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uyY-VZ-Ymr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="150" height="203"/>
+            <size key="customSize" width="150" height="237"/>
             <connections>
                 <outlet property="imageView" destination="GXt-Gd-qmL" id="xuv-kM-mtF"/>
+                <outlet property="place" destination="ONL-ce-bi8" id="CxU-IO-D34"/>
                 <outlet property="title" destination="Ya8-wL-ZnQ" id="ggc-e4-1tf"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="104.12946428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="115.51339285714285"/>
         </collectionViewCell>
     </objects>
 </document>
