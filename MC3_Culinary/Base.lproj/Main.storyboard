@@ -525,7 +525,7 @@
                                 <rect key="frame" x="0.0" y="398" width="414" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pancake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-dH-72D" userLabel="FoodName">
-                                        <rect key="frame" x="20" y="8" width="205" height="36"/>
+                                        <rect key="frame" x="20" y="8" width="373" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
@@ -714,7 +714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0T-DL-3vp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="-376"/>
+            <point key="canvasLocation" x="1253.6231884057972" y="-376.33928571428572"/>
         </scene>
     </scenes>
     <resources>
