@@ -8,6 +8,6 @@
 
 import Foundation
 
-let provinceBanten = ProvinceModel(name: "Banten", image: "makanan1", cities: bantenCities)
-let provinceJakarta = ProvinceModel(name: "DKI Jakarta", image: "makanan2", cities: DKIJakartaCities)
-let provinceJawaBarat = ProvinceModel(name: "Jawa Barat", image: "makanan1", cities: jawaBaratCities)
+let provinceBanten = ProvinceModel(name: "Banten", image: "makanan1")
+let provinceJakarta = ProvinceModel(name: "DKI Jakarta", image: "makanan2")
+let provinceJawaBarat = ProvinceModel(name: "Jawa Barat", image: "makanan1")

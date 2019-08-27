@@ -12,11 +12,11 @@ import UIKit
 class ProvinceModel{
     var name : String?
     var locationImage : String?
-    var cities : [CityModel]
+    var cities : [CityModel]?
     
-    init(name : String, image: String, cities:[CityModel]) {
+    init(name : String, image: String) {
         self.name = name
         self.locationImage = image
-        self.cities = cities
+       
     }
 }

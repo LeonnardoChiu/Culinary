@@ -31,6 +31,6 @@ class HomeCell: UICollectionViewCell {
         imageView.image = UIImage(named: model.images![0] ?? "placeholder")
         imageView.layer.cornerRadius = 8
         
-        place.text = "Pekalongan"
+        place.text = model.origin?.name
     }
 }

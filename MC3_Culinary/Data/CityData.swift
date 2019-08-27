@@ -9,16 +9,16 @@
 import Foundation
 
 let bantenCities : [CityModel] = [
-    CityModel(name: "Lebak", foods: lebakFoods),
-    CityModel(name: "Pandeglang", foods: pandeglangFoods),
-    CityModel(name: "Serang", foods: serangFoods),
-    CityModel(name: "Tangerang", foods: tangerangFoods)
+    CityModel(name: "Lebak", province: provinceBanten),
+    CityModel(name: "Pandeglang", province: provinceBanten),
+    CityModel(name: "Serang", province: provinceBanten),
+    CityModel(name: "Tangerang", province: provinceBanten)
 ]
 
 let DKIJakartaCities : [CityModel] = [
-    CityModel(name: "DKI Jakarta", foods: jakartaFoods)
+    CityModel(name: "DKI Jakarta", province: provinceJakarta)
 ]
 
 let jawaBaratCities : [CityModel] = [
-    CityModel(name: "Bandung", foods: bandungFoods)
+    CityModel(name: "Bandung", province: provinceJawaBarat)
 ]

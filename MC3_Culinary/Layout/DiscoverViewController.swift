@@ -22,7 +22,7 @@ class DiscoverViewController: UIViewController {
         }
         
         setupCollectionView()
-        
+        collectionView.reloadData()
     }
     
     private func setupCollectionView() {
@@ -35,15 +35,21 @@ class DiscoverViewController: UIViewController {
     
     func createData()
     {
-        for i in 0...provinceData.count-1{
-            for j in 0...provinceData[i].cities.count-1{
-                cityData.append(provinceData[i].cities[j])
-            }
-        }
+//        for i in 0...provinceData.count-1{
+//            for j in 0...provinceData[i].cities.count-1{
+//                cityData.append(provinceData[i].cities[j])
+//            }
+//        }
+//
+//        for i in 0...cityData.count-1{
+//            for j in 0...cityData[i].foods.count-1{
+//                foodData.append(cityData[i].foods[j])
+//            }
+//        }
         
-        for i in 0...cityData.count-1{
-            for j in 0...cityData[i].foods.count-1{
-                foodData.append(cityData[i].foods[j])
+        for i in 0...allFoods.count-1{
+            for j in 0...allFoods[i].count-1{
+                foodData.append(allFoods[i].self[j])
             }
         }
         
