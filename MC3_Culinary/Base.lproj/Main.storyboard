@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aBj-nv-HPc">
             <objects>
                 <navigationController id="jtt-su-U69" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="auf-kp-T2a"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="auf-kp-T2a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kc-Vy-d7t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="91.741071428571431"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="BI1-jD-BG7">
             <objects>
                 <navigationController id="Na1-wN-fMH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="OKJ-UG-531"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="OKJ-UG-531"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PTh-T5-Gq5">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -191,11 +191,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="953.57142857142856"/>
         </scene>
-        <!--Item-->
+        <!--Discovery-->
         <scene sceneID="xEG-5B-6oc">
             <objects>
                 <navigationController id="vaa-RF-ZpX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KSR-O5-8Zg"/>
+                    <tabBarItem key="tabBarItem" title="Discovery" image="DiscoverTabBarDisable" id="KSR-O5-8Zg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hm7-44-RMb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -718,7 +718,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DiscoverTabBarDisable" width="25" height="25"/>
         <image name="Jawa Barat" width="275" height="273"/>
         <image name="favorite" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
 </document>
