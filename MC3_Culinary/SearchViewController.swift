@@ -17,7 +17,6 @@ class SearchViewController: UIViewController {
     private var cityData : [CityModel] = []
     private var foodData : [TraditionalFoodModel] = []
     
-    var locationList = ["Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua", "Sumatera", "Jawa", "Kaimantan", "Sulawesi", "Papua"]
     var searchList = [String]()
     var searchLocation = [String]()
     var isSearching = false
@@ -30,17 +29,14 @@ class SearchViewController: UIViewController {
     }
     
     func createData() {
-        for i in 0...provinceData.count-1{
-            for j in 0...provinceData[i].cities.count-1{
-                cityData.append(provinceData[i].cities[j])
+        for i in 0...allFoods.count-1{
+            for j in 0...allFoods[i].count-1{
+                foodData.append(allFoods[i].self[j])
             }
         }
         
-        for i in 0...cityData.count-1{
-            for j in 0...cityData[i].foods.count-1{
-                foodData.append(cityData[i].foods[j])
-                searchList.append(cityData[i].foods[j].name!)
-            }
+        for i in 0...foodData.count-1{
+            searchList.append(foodData[i].name!)
         }
         
     }
@@ -92,6 +88,25 @@ extension SearchViewController: UISearchBarDelegate {
         isSearching = false
         searchBar.text = ""
         tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let foodDetail:PageDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageDetailViewController") as! PageDetailViewController
+        
+        if isSearching == false {
+            foodDetail.model = foodData[indexPath.row]
+        }
+        else{
+            let currentCell = tableView.cellForRow(at: indexPath) as! UITableViewCell
+            for i in 0...foodData.count-1{
+                
+                if currentCell.textLabel!.text == foodData[i].name! {
+                    foodDetail.model = foodData[i]
+                }
+            }
+        }
+        
+        self.navigationController?.pushViewController(foodDetail, animated: true)
     }
     
 }

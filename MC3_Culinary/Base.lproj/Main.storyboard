@@ -177,6 +177,7 @@
                         <outlet property="searchBar" destination="3t6-Qw-5ZN" id="IeI-P6-sZs"/>
                         <outlet property="searchDisplayController" destination="zOI-RQ-du6" id="ko8-No-Xnm"/>
                         <outlet property="tableView" destination="UEM-N0-EJK" id="xx5-1j-F6I"/>
+                        <segue destination="dnx-XJ-QpJ" kind="show" id="3Dk-gd-1Xq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gm-ZT-i9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,5 +723,8 @@
         <image name="Jawa Barat" width="275" height="273"/>
         <image name="favorite" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Dk-gd-1Xq"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
 </document>
