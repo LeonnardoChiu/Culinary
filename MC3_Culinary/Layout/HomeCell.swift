@@ -29,5 +29,6 @@ class HomeCell: UICollectionViewCell {
         
         title.text = model.name
         imageView.image = UIImage(named: model.images![0] ?? "placeholder")
+        imageView.layer.cornerRadius = 8
     }
 }

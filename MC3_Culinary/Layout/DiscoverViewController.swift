@@ -30,14 +30,13 @@ class DiscoverViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
     }
-    
+
     
     
     func createData()
     {
         for i in 0...provinceData.count-1{
             for j in 0...provinceData[i].cities.count-1{
-                print(provinceData[i].cities[j].name)
                 cityData.append(provinceData[i].cities[j])
             }
         }
@@ -57,25 +56,16 @@ class DiscoverViewController: UIViewController {
 
 extension DiscoverViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        print(foodData.count)
         let food = foodData[indexPath.row]
         let image = UIImage(named: food.images![0])
-        let height = image!.size.height
-        
-        var finalHeight: CGFloat = 0.0
+        var height = image!.size.height
 
-       
-       if height > 1000 {
-            finalHeight = height / 15
-        }
-       else {
-        finalHeight = 300
-        }
+        height = 200
+//        if (height > 350) {
+//            height = CGFloat.random(in: 250...350)
+//        }
         
-        return finalHeight
-        
-        
-//        return height/10
+        return height
     }
 }
 

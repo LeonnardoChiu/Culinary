@@ -41,7 +41,7 @@ class PinterestLayout: UICollectionViewLayout {
     
     //2. Configurable properties
     fileprivate var numberOfColumns = 2
-    fileprivate var cellPadding: CGFloat = 6
+    fileprivate var cellPadding: CGFloat = 8
     
     //3. Array to keep a cache of attributes.
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
@@ -93,7 +93,7 @@ class PinterestLayout: UICollectionViewLayout {
             
             // 6. Updates the collection view content height
             contentHeight = max(contentHeight, frame.maxY)
-            yOffset[column] = yOffset[column] + height
+            yOffset[column] = yOffset[column] + height + 10
             
             column = column < (numberOfColumns - 1) ? (column + 1) : 0
         }
