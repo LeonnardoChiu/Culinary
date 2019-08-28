@@ -14,6 +14,7 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var frame = CGRect(x:0, y:0, width: 0, height: 0)
+    var bookmarked = false
     
     @IBOutlet weak var foodNameDetail: UILabel!
     @IBOutlet weak var foodLocationDetail: UILabel!
@@ -26,9 +27,7 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var originLocation: UIImageView!
     
     var model: TraditionalFoodModel?
-    var bdelegate:BookmarkDelegate!
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -78,15 +77,24 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
 //        print(model?)
         
         
-        var bookmarklist: [String] = []
-        
-        if let bookmark = UserDefaults.standard.array(forKey: "bookmarklist") {
-            bookmarklist = bookmark as! [String]
+        if bookmarked == false{
+            bookmarked = true
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "bookmarkactive")
+            var bookmarklist: [String] = []
+            
+            if let bookmark = UserDefaults.standard.array(forKey: "bookmarklist") {
+                bookmarklist = bookmark as! [String]
+            }
+            
+            bookmarklist.append(model!.name!)
+            
+            UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
+            print(bookmarklist.count)
+        }else if bookmarked == true{
+            bookmarked = false
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "Combined Shape")
         }
-    
-        bookmarklist.append(model!.name!)
         
-        UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
         
     }
 }

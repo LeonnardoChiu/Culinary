@@ -17,9 +17,8 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         bookmarkListName.append(data)
     }
     
-    var bookmarkedFood = ["Sate", "Rendang", "Bakso"]
-    var bookmarkSubtitle = ["Sumatera", "jawa", "Padang"]
-    var bookmarkImage: [UIImage] = []
+ 
+  
     var foodData: [TraditionalFoodModel] = []
     var bookmarkFoodData: [TraditionalFoodModel] = []
     var bookmarkListName: [String] = []
