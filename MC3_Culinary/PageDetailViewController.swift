@@ -23,19 +23,26 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var ingredientDetail: UILabel!
     
     @IBOutlet weak var methodDetail: UILabel!
+    @IBOutlet weak var originLocation: UIImageView!
     
     var model: TraditionalFoodModel?
+    var bdelegate:BookmarkDelegate!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        
         foodNameDetail.text = model?.name
         foodLocationDetail.text = model?.origin?.name
         factDetail.text = model?.funFact
         ingredientDetail.text = model?.Ingredient
         methodDetail.text = model?.method
+        
+        var originName = model?.origin?.province.locationImage
+        originLocation.image = UIImage (named: originName!)
         
         title = model?.name
         
@@ -63,4 +70,23 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = Int(pageNumber)
     }
     
+    @IBAction func addBookmark(_ sender: Any) {
+//        let bookmarkVC : BookmarkViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bookmarkVC") as! BookmarkViewController
+//        bookmarkVC.bookmarkFoodData = [TraditionalFoodModel(name: foodNameDetail.text!, images: ["\(model!.images!)"], fact: factDetail.text!, ingredient: ingredientDetail.text!, method: methodDetail.text!, origin: model!.origin!)]
+//
+//        self.present(bookmarkVC, animated: true, completion: nil)
+//        print(model?)
+        
+        
+        var bookmarklist: [String] = []
+        
+        if let bookmark = UserDefaults.standard.array(forKey: "bookmarklist") {
+            bookmarklist = bookmark as! [String]
+        }
+    
+        bookmarklist.append(model!.name!)
+        
+        UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
+        
+    }
 }

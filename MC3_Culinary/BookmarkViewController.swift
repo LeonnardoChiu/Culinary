@@ -8,34 +8,48 @@
 
 import UIKit
 
-class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol BookmarkDelegate : NSObjectProtocol {
+    func addFoodName(data : String)
+}
+
+class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BookmarkDelegate {
+    func addFoodName(data: String) {
+        bookmarkListName.append(data)
+    }
     
     var bookmarkedFood = ["Sate", "Rendang", "Bakso"]
     var bookmarkSubtitle = ["Sumatera", "jawa", "Padang"]
     var bookmarkImage: [UIImage] = []
+    var foodData: [TraditionalFoodModel] = []
+    var bookmarkFoodData: [TraditionalFoodModel] = []
+    var bookmarkListName: [String] = []
+    var foodModelIndex = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookmarkedFood.count
+        return bookmarkFoodData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkCell", for: indexPath)
-        cell.textLabel?.text = bookmarkedFood[indexPath.item]
-        cell.detailTextLabel?.text = bookmarkSubtitle[indexPath.item]
+        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+//        cell.imageView?.image = UIImage(
+        cell.imageView?.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
+        cell.textLabel?.text = bookmarkFoodData[indexPath.item].name
+        cell.detailTextLabel?.text = bookmarkFoodData[indexPath.item].origin?.name
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let moveObjTemp = bookmarkedFood[sourceIndexPath.item]
-        bookmarkedFood.remove(at: sourceIndexPath.item)
-        bookmarkedFood.insert(moveObjTemp, at: destinationIndexPath.item)
+        let moveObjTemp = bookmarkFoodData[sourceIndexPath.item]
+        bookmarkFoodData.remove(at: sourceIndexPath.item)
+        bookmarkFoodData.insert(moveObjTemp, at: destinationIndexPath.item)
         
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            bookmarkedFood.remove(at: indexPath.item)
+            bookmarkFoodData.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -44,8 +58,29 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
+        
+        searchModel()
         navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func searchModel(){
+        for i in 0...allFoods.count-1{
+            for j in 0...allFoods[i].count-1{
+                foodData.append(allFoods[i].self[j])
+            }
+        }
+        print(bookmarkListName.count)
+        for i in 0...bookmarkListName.count-1{
+            for j in 0...foodData.count-1{
+                if foodData[j].name == bookmarkListName[i]
+                {
+                    bookmarkFoodData.append(foodData[j])
+                }
+            }
+        }
     }
     
     @IBAction func btnEditClicked(_ sender: UIBarButtonItem) {
