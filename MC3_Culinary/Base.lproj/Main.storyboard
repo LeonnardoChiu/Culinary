@@ -50,14 +50,14 @@
                                                     <rect key="frame" x="65" y="15" width="48.5" height="31.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FWt-q5-658">
                                                     <rect key="frame" x="65" y="46.5" width="53" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="favorite" id="RJY-Jb-4og">
@@ -220,7 +220,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zla-N5-vbo">
                                 <rect key="frame" x="20" y="108" width="95" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQk-D8-f6c">
@@ -262,7 +262,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-qu-MoZ">
                                 <rect key="frame" x="20" y="549" width="49" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Province" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-2I-ckC">
@@ -286,7 +286,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w36-Mq-9bq">
                                 <rect key="frame" x="20" y="690" width="104" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oee-Sg-hjN">
@@ -528,14 +528,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pancake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-dH-72D" userLabel="FoodName">
                                         <rect key="frame" x="20" y="8" width="373" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bandung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0w-yF-SQY" userLabel="FoodLocation">
                                         <rect key="frame" x="20" y="44" width="220" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -549,52 +549,52 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGM-AK-kpO">
                                 <rect key="frame" x="0.0" y="416" width="414" height="480"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-kd-7Sg">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-kd-7Sg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-nh-lbS" userLabel="FunFact">
-                                                <rect key="frame" x="20" y="9" width="92" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-nh-lbS" userLabel="FunFact">
+                                                <rect key="frame" x="20" y="9" width="92" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="92" id="GbJ-9z-Y6l"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" red="0.396078431372549" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adip" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn4-dt-QzE" userLabel="FactDetail">
-                                                <rect key="frame" x="20" y="38" width="374" height="42.5"/>
+                                                <rect key="frame" x="20" y="41" width="374" height="42.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLO-rz-AIA" userLabel="Ingredient">
-                                                <rect key="frame" x="20" y="97.5" width="114" height="21"/>
+                                                <rect key="frame" x="20" y="100.5" width="114" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="114" id="Rrk-B3-BzB"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" red="0.396078431372549" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adip" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwD-bP-JDY" userLabel="IngredientDetail">
-                                                <rect key="frame" x="20" y="126.5" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="132.5" width="374" height="42.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="374" id="ccI-dA-oVX"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ5-YP-xMO">
-                                                <rect key="frame" x="20" y="88.5" width="394" height="1"/>
+                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ5-YP-xMO">
+                                                <rect key="frame" x="20" y="91.5" width="394" height="1"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="394" id="LvT-GO-xAB"/>
                                                     <constraint firstAttribute="height" constant="1" id="nRZ-et-cjV"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOF-E1-nyS">
-                                                <rect key="frame" x="20" y="175.5" width="394" height="1"/>
+                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOF-E1-nyS">
+                                                <rect key="frame" x="20" y="183" width="394" height="1"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="394" id="Fpv-oe-JZ6"/>
@@ -602,21 +602,21 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-uL-Ie6" userLabel="Method">
-                                                <rect key="frame" x="20" y="184.5" width="184" height="21"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="20" y="192" width="184" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" red="0.396078431372549" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adip" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyN-tm-ovb" userLabel="MethodDetail">
-                                                <rect key="frame" x="20" y="213.5" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="224" width="374" height="42.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="374" id="Ula-0y-ssZ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6z-fv-u1b">
+                                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6z-fv-u1b">
                                                 <rect key="frame" x="20" y="0.0" width="394" height="1"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
@@ -625,8 +625,8 @@
                                                     <constraint firstAttribute="width" constant="394" id="yUF-2r-cip"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jawa Barat" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-LD-tHR">
-                                                <rect key="frame" x="20" y="262.5" width="374" height="273"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-LD-tHR">
+                                                <rect key="frame" x="20" y="274.5" width="374" height="250"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -709,6 +709,7 @@
                         <outlet property="foodNameDetail" destination="5I2-dH-72D" id="x5y-MZ-c8m"/>
                         <outlet property="ingredientDetail" destination="FwD-bP-JDY" id="D13-qf-bXq"/>
                         <outlet property="methodDetail" destination="yyN-tm-ovb" id="dLj-Tl-UIE"/>
+                        <outlet property="originLocation" destination="Y50-LD-tHR" id="p44-Br-mEG"/>
                         <outlet property="pageControl" destination="llz-f9-X88" id="HOG-bV-etL"/>
                         <outlet property="scrollView" destination="tJw-zp-GfP" id="HyA-nx-lQp"/>
                     </connections>
@@ -720,11 +721,10 @@
     </scenes>
     <resources>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
-        <image name="Jawa Barat" width="275" height="273"/>
         <image name="favorite" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Dk-gd-1Xq"/>
+        <segue reference="CJJ-lV-q1y"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
 </document>
