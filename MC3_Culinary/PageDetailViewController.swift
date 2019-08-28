@@ -25,11 +25,14 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var methodDetail: UILabel!
     
     var model: TraditionalFoodModel?
+    var bdelegate:BookmarkDelegate!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
         
         foodNameDetail.text = model?.name
         foodLocationDetail.text = model?.origin?.name
@@ -63,4 +66,23 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = Int(pageNumber)
     }
     
+    @IBAction func addBookmark(_ sender: Any) {
+//        let bookmarkVC : BookmarkViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bookmarkVC") as! BookmarkViewController
+//        bookmarkVC.bookmarkFoodData = [TraditionalFoodModel(name: foodNameDetail.text!, images: ["\(model!.images!)"], fact: factDetail.text!, ingredient: ingredientDetail.text!, method: methodDetail.text!, origin: model!.origin!)]
+//
+//        self.present(bookmarkVC, animated: true, completion: nil)
+//        print(model?)
+        
+        
+        var bookmarklist: [String] = []
+        
+        if let bookmark = UserDefaults.standard.array(forKey: "bookmarklist") {
+            bookmarklist = bookmark as! [String]
+        }
+    
+        bookmarklist.append(model!.name!)
+        
+        UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
+        
+    }
 }

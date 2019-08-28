@@ -30,7 +30,7 @@
         <!--Bookmark-->
         <scene sceneID="BfZ-DJ-ljP">
             <objects>
-                <viewController id="ZEP-BA-fih" customClass="BookmarkViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bookmarkVC" id="ZEP-BA-fih" customClass="BookmarkViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5cz-1j-tmg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,21 +47,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="38E-dh-uPz">
-                                                    <rect key="frame" x="65" y="15" width="48.5" height="31.5"/>
+                                                    <rect key="frame" x="102" y="15" width="48.5" height="31.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.59607843140000005" green="0.20000000000000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FWt-q5-658">
-                                                    <rect key="frame" x="65" y="46.5" width="53" height="18"/>
+                                                    <rect key="frame" x="102" y="46.5" width="53" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="favorite" id="RJY-Jb-4og">
-                                                    <rect key="frame" x="20" y="24" width="30" height="30"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" image="balok menes" id="RJY-Jb-4og">
+                                                    <rect key="frame" x="20" y="0.0" width="67" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -701,7 +701,11 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qpu-4t-quf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ma6-RT-jR6"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="8If-1q-zea"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="8If-1q-zea">
+                            <connections>
+                                <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="j2D-FP-ewS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="factDetail" destination="hn4-dt-QzE" id="OM3-6n-9gj"/>
@@ -721,7 +725,7 @@
     <resources>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
         <image name="Jawa Barat" width="275" height="273"/>
-        <image name="favorite" width="30" height="30"/>
+        <image name="balok menes" width="1080" height="1278"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Dk-gd-1Xq"/>
