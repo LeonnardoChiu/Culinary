@@ -26,7 +26,7 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var originLocation: UIImageView!
     
     var model: TraditionalFoodModel?
-    var bdelegate:BookmarkDelegate!
+  
     
     
     override func viewDidLoad() {
