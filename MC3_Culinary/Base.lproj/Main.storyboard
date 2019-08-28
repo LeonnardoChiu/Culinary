@@ -701,7 +701,11 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qpu-4t-quf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ma6-RT-jR6"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="8If-1q-zea"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="8If-1q-zea">
+                            <connections>
+                                <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="VG4-CU-u8L"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="factDetail" destination="hn4-dt-QzE" id="OM3-6n-9gj"/>
