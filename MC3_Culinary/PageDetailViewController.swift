@@ -23,6 +23,7 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var ingredientDetail: UILabel!
     
     @IBOutlet weak var methodDetail: UILabel!
+    @IBOutlet weak var originLocation: UIImageView!
     
     var model: TraditionalFoodModel?
     var bdelegate:BookmarkDelegate!
@@ -39,6 +40,9 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         factDetail.text = model?.funFact
         ingredientDetail.text = model?.Ingredient
         methodDetail.text = model?.method
+        
+        var originName = model?.origin?.province.locationImage
+        originLocation.image = UIImage (named: originName!)
         
         title = model?.name
         
