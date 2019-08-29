@@ -47,20 +47,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="38E-dh-uPz">
-                                                    <rect key="frame" x="65" y="15.5" width="37.5" height="24"/>
+                                                    <rect key="frame" x="20" y="15.5" width="37.5" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FWt-q5-658">
-                                                    <rect key="frame" x="65" y="43" width="53" height="18"/>
+                                                    <rect key="frame" x="20" y="43" width="53" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="favorite" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="RJY-Jb-4og">
+                                                <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="RJY-Jb-4og">
                                                     <rect key="frame" x="20" y="24" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -729,7 +729,6 @@
         <image name="BookmarkIsi" width="30" height="25"/>
         <image name="Combined Shape" width="25" height="25"/>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
-        <image name="favorite" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CJJ-lV-q1y"/>

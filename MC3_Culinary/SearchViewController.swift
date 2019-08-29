@@ -27,6 +27,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         createData()
 
+        self.hideKeyboardWhenTappedAround()
+        
         // Do any additional setup after loading the view.
     }
     

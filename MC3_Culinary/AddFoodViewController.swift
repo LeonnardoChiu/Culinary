@@ -24,10 +24,15 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var imageUploaded = false
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btnDone.isEnabled = false
-
+        
+        self.hideKeyboardWhenTappedAround()
+    
+        
         // Do any additional setup after loading the view.
     }
     
@@ -149,4 +154,16 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     */
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
