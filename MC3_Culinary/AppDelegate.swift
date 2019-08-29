@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        add colour tab bar
         UITabBar.appearance().tintColor = UIColor(red: 246/255.0, green: 141/255.0, blue: 36/255.0, alpha: 1.0)
         
+//        let defaults = UserDefaults.standard
+//        let dictionary = defaults.dictionaryRepresentation()
+//        dictionary.keys.forEach { key in
+//            defaults.removeObject(forKey: key)
+//        }
+        
         return true
     }
 
