@@ -14,7 +14,11 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var frame = CGRect(x:0, y:0, width: 0, height: 0)
-    var bookmarked = false
+    var bookmarked: Bool = false {
+        didSet {
+            setBookmarkIcon(bookmarked)
+        }
+    }
     
     @IBOutlet weak var foodNameDetail: UILabel!
     @IBOutlet weak var foodLocationDetail: UILabel!
@@ -31,7 +35,11 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        if let bookmarklist = UserDefaults.standard.array(forKey: "bookmarklist"){
+            let bookmark: [String] = bookmarklist as! [String]
+            
+            self.bookmarked = bookmark.contains(model!.name!)
+        }
         
         foodNameDetail.text = model?.name
         foodLocationDetail.text = model?.origin?.name
@@ -76,9 +84,9 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
 //        print(model?)
         
         
-        if bookmarked == false{
+        if bookmarked == false {
             bookmarked = true
-            navigationItem.rightBarButtonItem?.image = UIImage(named: "bookmarkactive")
+            
             var bookmarklist: [String] = []
             
             if let bookmark = UserDefaults.standard.array(forKey: "bookmarklist") {
@@ -94,8 +102,16 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
             print(bookmarklist.count)
         }else if bookmarked == true{
             bookmarked = false
-            navigationItem.rightBarButtonItem?.image = UIImage(named: "Combined Shape")
+           
         }
     
+    }
+    
+    private func setBookmarkIcon(_ value: Bool){
+        if value == true {
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "bookmarkactive")
+        } else {
+             navigationItem.rightBarButtonItem?.image = UIImage(named: "Combined Shape")
+        }
     }
 }
