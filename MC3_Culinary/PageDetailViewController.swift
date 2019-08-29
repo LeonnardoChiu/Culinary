@@ -126,4 +126,12 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
              navigationItem.rightBarButtonItem?.image = UIImage(named: "BookmarkNonIsi")
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if bookmarked == true {
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "BookmarkIsi")
+        } else {
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "BookmarkNonIsi")
+        }
+    }
 }
