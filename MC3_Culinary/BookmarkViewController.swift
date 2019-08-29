@@ -52,6 +52,25 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let foodDetail:PageDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageDetailViewController") as! PageDetailViewController
+        
+//        if isSearching == false {
+            foodDetail.model = bookmarkFoodData[indexPath.row]
+//        }
+//        else{
+//
+//            for i in 0...bookmarkFoodData.count-1{
+//
+//                if currentCell.textLabel!.text == bookmarkFoodData[i].name! {
+//                    foodDetail.model = bookmarkFoodData[i]
+//                }
+//            }
+//        }
+    
+        self.navigationController?.pushViewController(foodDetail, animated: true)
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
