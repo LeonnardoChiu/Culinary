@@ -10,11 +10,6 @@ import UIKit
 
 class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var bookmarkedFood = ["Sate", "Rendang", "Bakso"]
-    var bookmarkSubtitle = ["Sumatera", "jawa", "Padang"]
-    
-    
-    var bookmarkImage: [UIImage] = []
     var foodData: [TraditionalFoodModel] = []
     var bookmarkFoodData: [TraditionalFoodModel] = []
     var bookmarkListName: [String] = []
@@ -26,9 +21,13 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkCell", for: indexPath)
-        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        
+        let cellImg : UIImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 50, height: 50))
+        cellImg.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
+        cell.addSubview(cellImg)
+//        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
 //        cell.imageView?.image = UIImage(
-        cell.imageView?.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
+//        cell.imageView?.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
         cell.textLabel?.text = bookmarkFoodData[indexPath.item].name
         cell.detailTextLabel?.text = bookmarkFoodData[indexPath.item].origin?.name
         return cell
