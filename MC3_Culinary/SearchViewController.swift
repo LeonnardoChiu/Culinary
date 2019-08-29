@@ -139,9 +139,8 @@ extension SearchViewController: UISearchBarDelegate {
             print("LOCATION SELECTED")
             let foodDiscover:DiscoverViewController = self.storyboard?.instantiateViewController(withIdentifier: "DiscoverViewController") as! DiscoverViewController
             
-            if isSearching == false {
-                foodDiscover.selectedCity = currentCell.textLabel!.text!
-            }
+            foodDiscover.selectedCity = currentCell.textLabel!.text!
+            
 //            else{
 //
 //                for i in 0...foodData.count-1{
