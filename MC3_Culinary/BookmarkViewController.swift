@@ -83,7 +83,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
 
         if UserDefaults.standard.array(forKey: "bookmarklist") == nil{
             bookmarkListName = []
-        }else {
+        }else{
             bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
             searchModel()
         }
@@ -96,43 +96,53 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
 
     override func viewDidAppear(_ animated: Bool) {
-        bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
-        if bookmarkListName.count != bookmarkFoodData.count{
-            if bookmarkListName.count > bookmarkFoodData.count {
-                for i in bookmarkFoodData.count...bookmarkListName.count-1{
-                    for j in 0...foodData.count-1{
-                        if foodData[j].name == bookmarkListName[i]
-                        {
-                            bookmarkFoodData.append(foodData[j])
+        
+//        if UserDefaults.standard.array(forKey: "bookmarklist") == nil{
+//            bookmarkListName = []
+//        }else {
+            bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
+            if bookmarkListName.count != bookmarkFoodData.count{
+                if bookmarkListName.count > bookmarkFoodData.count {
+                    for i in bookmarkFoodData.count...bookmarkListName.count-1{
+                        for j in 0...foodData.count-1{
+                            if foodData[j].name == bookmarkListName[i]
+                            {
+                                bookmarkFoodData.append(foodData[j])
+                            }
+                        }
+                    }
+                }
+                else{
+                    for (idx,data) in bookmarkFoodData.enumerated(){
+                        if !bookmarkListName.contains(data.name!){
+                            bookmarkFoodData.remove(at: idx)
                         }
                     }
                 }
             }
-            else{
-                for (idx,data) in bookmarkFoodData.enumerated(){
-                    if !bookmarkListName.contains(data.name!){
-                        bookmarkFoodData.remove(at: idx)
-                    }
-                }
-            }
-        }
-        
+//        }
         
         tableView.reloadData()
     }
     
     func searchModel(){
+        
         for i in 0...allFoods.count-1{
             for j in 0...allFoods[i].count-1{
                 foodData.append(allFoods[i].self[j])
             }
         }
-        print(bookmarkListName.count)
-        for i in 0...bookmarkListName.count-1{
-            for j in 0...foodData.count-1{
-                if foodData[j].name == bookmarkListName[i]
-                {
-                    bookmarkFoodData.append(foodData[j])
+        
+        if bookmarkListName.count > 0{
+            
+            print(bookmarkListName.count)
+            
+            for i in 0...bookmarkListName.count-1{
+                for j in 0...foodData.count-1{
+                    if foodData[j].name == bookmarkListName[i]
+                    {
+                        bookmarkFoodData.append(foodData[j])
+                    }
                 }
             }
         }
