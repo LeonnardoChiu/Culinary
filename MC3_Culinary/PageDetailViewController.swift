@@ -121,9 +121,9 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     
     private func setBookmarkIcon(_ value: Bool){
         if value == true {
-            navigationItem.rightBarButtonItem?.image = UIImage(named: "bookmarkactive")
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "BookmarkIsi")
         } else {
-             navigationItem.rightBarButtonItem?.image = UIImage(named: "Combined Shape")
+             navigationItem.rightBarButtonItem?.image = UIImage(named: "BookmarkNonIsi")
         }
     }
 }

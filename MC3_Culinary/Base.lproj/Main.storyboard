@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Bookmarks-->
         <scene sceneID="aBj-nv-HPc">
             <objects>
                 <navigationController id="jtt-su-U69" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="auf-kp-T2a"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="BookmarkIsi" id="auf-kp-T2a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kc-Vy-d7t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -726,6 +726,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BookmarkIsi" width="30" height="25"/>
         <image name="Combined Shape" width="25" height="25"/>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
         <image name="favorite" width="30" height="30"/>
