@@ -44,8 +44,12 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            UserDefaults.standard.removeObject(forKey: "bookmarklist")
+            print(bookmarkFoodData[indexPath.row].name!)
+            print(UserDefaults.standard.array(forKey: "bookmarklist")?.count)
             bookmarkFoodData.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
         }
     }
     
@@ -62,8 +66,11 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         
         navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
+        
+        tableView.reloadData()
     }
     
+
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -84,6 +91,13 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
     }
+    
+
+    
+
+    
+    
+    
     
     @IBAction func btnEditClicked(_ sender: UIBarButtonItem) {
         self.tableView.isEditing = !self.tableView.isEditing
