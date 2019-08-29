@@ -102,7 +102,19 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
             print(bookmarklist.count)
         }else if bookmarked == true{
             bookmarked = false
-           
+            if var bookmarklist = UserDefaults.standard.array(forKey: "bookmarklist") as? [String]{
+                
+                //cek array
+                for (idx, name) in bookmarklist.enumerated(){
+                    if name == model!.name!{
+                        bookmarklist.remove(at: idx)
+                        print("deleted row")
+                        UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
+                        print(bookmarklist.count)
+                    }
+                }
+                
+            }
         }
     
     }
