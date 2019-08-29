@@ -22,3 +22,5 @@ let DKIJakartaCities : [CityModel] = [
 let jawaBaratCities : [CityModel] = [
     CityModel(name: "Bandung", province: provinceJawaBarat)
 ]
+
+let allCities = bantenCities + DKIJakartaCities + jawaBaratCities

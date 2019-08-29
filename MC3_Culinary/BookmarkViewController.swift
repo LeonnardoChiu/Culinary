@@ -8,17 +8,8 @@
 
 import UIKit
 
-protocol BookmarkDelegate : NSObjectProtocol {
-    func addFoodName(data : String)
-}
-
-class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BookmarkDelegate {
-    func addFoodName(data: String) {
-        bookmarkListName.append(data)
-    }
+class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
- 
-  
     var foodData: [TraditionalFoodModel] = []
     var bookmarkFoodData: [TraditionalFoodModel] = []
     var bookmarkListName: [String] = []
@@ -48,8 +39,12 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            UserDefaults.standard.removeObject(forKey: "bookmarklist")
+            print(bookmarkFoodData[indexPath.row].name!)
+            print(UserDefaults.standard.array(forKey: "bookmarklist")?.count)
             bookmarkFoodData.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
         }
     }
     
@@ -57,13 +52,23 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
+        if UserDefaults.standard.array(forKey: "bookmarklist") == nil{
+            bookmarkListName = []
+        }else {
+            bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
+            searchModel()
+        }
         
-        searchModel()
         navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
+        
+        tableView.reloadData()
     }
     
+
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
     func searchModel(){
         for i in 0...allFoods.count-1{
@@ -82,9 +87,17 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+
+    
+
+    
+    
+    
+    
     @IBAction func btnEditClicked(_ sender: UIBarButtonItem) {
         self.tableView.isEditing = !self.tableView.isEditing
         sender.title = (self.tableView.isEditing) ? "Done" : "Edit"
+        
     }
     
     /*

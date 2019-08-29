@@ -14,11 +14,13 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var provinceData: [ProvinceModel] = [provinceBanten, provinceJakarta, provinceJawaBarat]
-    private var cityData : [CityModel] = []
+    private var cityData = allCities
     private var foodData : [TraditionalFoodModel] = []
     
-    var searchList = [String]()
-    var searchLocation = [String]()
+    var searchFoodList = [String]()
+    var searchLocationList = [String]()
+    var searchLocationFilter = [String]()
+    var searchFoodFilter = [String]()
     var isSearching = false
     
     override func viewDidLoad() {
@@ -32,13 +34,17 @@ class SearchViewController: UIViewController {
         for i in 0...allFoods.count-1{
             for j in 0...allFoods[i].count-1{
                 foodData.append(allFoods[i].self[j])
+               
             }
         }
         
         for i in 0...foodData.count-1{
-            searchList.append(foodData[i].name!)
+            searchFoodList.append(foodData[i].name!)
         }
         
+        for i in 0...cityData.count-1{
+            searchLocationList.append(cityData[i].name!)
+        }
     }
     
 
@@ -55,31 +61,66 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isSearching {
-            return searchLocation.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Location"
         }
         else{
-            return searchList.count
+            return "Food"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            if isSearching {
+                return searchLocationFilter.count
+            }
+            else{
+                return searchLocationList.count
+            }
+        }
+        else{
+            if isSearching {
+                return searchFoodFilter.count
+            }
+            else{
+                return searchFoodList.count
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        if isSearching {
-            cell?.textLabel?.text = searchLocation[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        if indexPath.section == 0{
+            if isSearching {
+                cell.textLabel?.text = searchLocationFilter[indexPath.row]
+            }
+            else{
+                cell.textLabel?.text = searchLocationList[indexPath.row]
+            }
         }
         else{
-            cell?.textLabel?.text = searchList[indexPath.row]
+            if isSearching {
+                cell.textLabel?.text = searchFoodFilter[indexPath.row]
+            }
+            else{
+                cell.textLabel?.text = searchFoodList[indexPath.row]
+            }
         }
-        return cell!
+        return cell
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("LAGI SEARCHHHHH")
-        searchLocation = searchList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchLocationFilter = searchLocationList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchFoodFilter = searchFoodList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
         isSearching = true
         tableView.reloadData()
     }
@@ -91,22 +132,61 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let foodDetail:PageDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageDetailViewController") as! PageDetailViewController
         
-        if isSearching == false {
-            foodDetail.model = foodData[indexPath.row]
+        let currentCell = tableView.cellForRow(at: indexPath) as! UITableViewCell
+
+        if indexPath.section == 0 {
+            print("LOCATION SELECTED")
+            let foodDiscover:DiscoverViewController = self.storyboard?.instantiateViewController(withIdentifier: "DiscoverViewController") as! DiscoverViewController
+            
+            if isSearching == false {
+                foodDiscover.selectedCity = currentCell.textLabel!.text!
+            }
+//            else{
+//
+//                for i in 0...foodData.count-1{
+//
+//                    if currentCell.textLabel!.text == foodData[i].name! {
+//                        foodDetail.model = foodData[i]
+//                    }
+//                }
+//            }
+            
+            self.navigationController?.pushViewController(foodDiscover, animated: true)
         }
-        else{
-            let currentCell = tableView.cellForRow(at: indexPath) as! UITableViewCell
-            for i in 0...foodData.count-1{
+        else {
+            print("Food SELECTERD")
+            let foodDetail:PageDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageDetailViewController") as! PageDetailViewController
+            
+            if isSearching == false {
+                foodDetail.model = foodData[indexPath.row]
+            }
+            else{
                 
-                if currentCell.textLabel!.text == foodData[i].name! {
-                    foodDetail.model = foodData[i]
+                for i in 0...foodData.count-1{
+                    
+                    if currentCell.textLabel!.text == foodData[i].name! {
+                        foodDetail.model = foodData[i]
+                    }
                 }
             }
+            
+            self.navigationController?.pushViewController(foodDetail, animated: true)
         }
         
-        self.navigationController?.pushViewController(foodDetail, animated: true)
+//        for i in 0...provinceData.count-1 {
+//            if currentCell.textLabel!.text == provinceData[i].name! {
+//                isLocationName = true
+//                break
+//            }
+//            else{
+//                isFoodName = true
+//            }
+//        }
+        
+//        if numberOfSections(in: tableView) == 0 {
+//        }
+        
     }
     
 }

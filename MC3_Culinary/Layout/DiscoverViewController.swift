@@ -14,9 +14,15 @@ class DiscoverViewController: UIViewController {
     private var cityData : [CityModel] = []
     private var foodData : [TraditionalFoodModel] = []
     
+    var selectedCity = ""
+    var filteredFood: [TraditionalFoodModel]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(selectedCity)
+        
         createData()
+        filteredFood = foodData.filter({$0.origin?.name == selectedCity})
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
@@ -79,21 +85,42 @@ extension DiscoverViewController: PinterestLayoutDelegate {
 
 extension DiscoverViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if selectedCity != ""{
+            return filteredFood!.count
+        }
         return foodData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
         
-        cell.model = foodData[indexPath.row]
+        
+        if selectedCity == ""{
+            cell.model = foodData[indexPath.row]
+        }else{
+            
+            cell.model = filteredFood![indexPath.row]
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let currentCell = collectionView.cellForItem(at: indexPath) as! HomeCell
+        
         let foodDetail:PageDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageDetailViewController") as! PageDetailViewController
         
-        foodDetail.model = foodData[indexPath.row]
+        if selectedCity == "" {  
+            foodDetail.model = foodData[indexPath.row]
+        }
+        else{
+            for i in 0...filteredFood!.count-1 {
+                if currentCell.title.text == filteredFood![i].name! {
+                    foodDetail.model = filteredFood![i]
+                }
+            }
+        }
         
         self.navigationController?.pushViewController(foodDetail, animated: true)
     }

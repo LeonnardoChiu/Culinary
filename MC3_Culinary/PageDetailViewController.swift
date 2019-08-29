@@ -27,7 +27,6 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var originLocation: UIImageView!
     
     var model: TraditionalFoodModel?
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -94,7 +93,6 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
             bookmarked = false
             navigationItem.rightBarButtonItem?.image = UIImage(named: "Combined Shape")
         }
-        
-        
+    
     }
 }

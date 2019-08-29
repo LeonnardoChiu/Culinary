@@ -132,12 +132,12 @@
                                     <outlet property="delegate" destination="3sI-86-bOP" id="Y4g-pS-pea"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-N0-EJK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-N0-EJK">
                                 <rect key="frame" x="0.0" y="196" width="414" height="617"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="gKB-yh-tyz" style="IBUITableViewCellStyleDefault" id="jFy-eT-uFT">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jFy-eT-uFT" id="uJh-K2-LhT">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -178,6 +178,7 @@
                         <outlet property="searchDisplayController" destination="zOI-RQ-du6" id="ko8-No-Xnm"/>
                         <outlet property="tableView" destination="UEM-N0-EJK" id="xx5-1j-F6I"/>
                         <segue destination="dnx-XJ-QpJ" kind="show" id="3Dk-gd-1Xq"/>
+                        <segue destination="XgJ-Vl-RRd" kind="show" id="BSu-45-MrI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gm-ZT-i9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,7 +410,7 @@
         <!--Discover-->
         <scene sceneID="aPu-8C-fOf">
             <objects>
-                <viewController id="XgJ-Vl-RRd" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiscoverViewController" id="XgJ-Vl-RRd" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MW2-4u-AYd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -731,6 +732,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CJJ-lV-q1y"/>
+        <segue reference="BSu-45-MrI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96470588235294119" green="0.55294117647058827" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
 </document>
