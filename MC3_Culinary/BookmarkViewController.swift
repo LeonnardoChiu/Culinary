@@ -67,6 +67,19 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
 
     override func viewDidAppear(_ animated: Bool) {
+        bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
+        if bookmarkListName.count > bookmarkFoodData.count{
+            for i in bookmarkFoodData.count...bookmarkListName.count-1{
+                for j in 0...foodData.count-1{
+                    if foodData[j].name == bookmarkListName[i]
+                    {
+                        bookmarkFoodData.append(foodData[j])
+                    }
+                }
+            }
+        }
+        
+        
         tableView.reloadData()
     }
     
@@ -85,6 +98,10 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                 }
             }
         }
+    }
+    
+    func appendBookmark(){
+        
     }
     
 

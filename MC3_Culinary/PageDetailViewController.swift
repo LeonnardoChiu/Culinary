@@ -85,9 +85,12 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
                 bookmarklist = bookmark as! [String]
             }
             
-            bookmarklist.append(model!.name!)
+            if !bookmarklist.contains(model!.name!){
+                bookmarklist.append(model!.name!)
+                UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
+                print("Bookmarked")
+            }
             
-            UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
             print(bookmarklist.count)
         }else if bookmarked == true{
             bookmarked = false
