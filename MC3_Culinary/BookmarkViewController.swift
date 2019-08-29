@@ -43,7 +43,13 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            UserDefaults.standard.removeObject(forKey: "bookmarklist")
+           // UserDefaults.standard.removeObject(forKey: "bookmarklist")
+            if var bookmarklist = UserDefaults.standard.array(forKey: "bookmarklist"){
+                bookmarklist.remove(at: indexPath.row)
+                print("deleted row")
+                UserDefaults.standard.setValue(bookmarklist, forKey: "bookmarklist")
+            }
+            
             print(bookmarkFoodData[indexPath.row].name!)
             print(UserDefaults.standard.array(forKey: "bookmarklist")?.count)
             bookmarkFoodData.remove(at: indexPath.item)
