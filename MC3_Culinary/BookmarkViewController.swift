@@ -20,16 +20,15 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkCell", for: indexPath) as! BookmarkCell
         
-        let cellImg : UIImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 50, height: 50))
-        cellImg.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
-        cell.addSubview(cellImg)
-//        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-//        cell.imageView?.image = UIImage(
-//        cell.imageView?.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
-        cell.textLabel?.text = bookmarkFoodData[indexPath.item].name
-        cell.detailTextLabel?.text = bookmarkFoodData[indexPath.item].origin?.name
+//        let cellImg : UIImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 50, height: 50))
+//        cellImg.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
+//        cell.addSubview(cellImg)
+        cell.imgBookmark.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
+        cell.imgBookmark.image = UIImage(named: bookmarkFoodData[indexPath.item].images![0])
+        cell.titleLb.text = bookmarkFoodData[indexPath.item].name
+        cell.subheadLb.text = bookmarkFoodData[indexPath.item].origin?.name
         return cell
         
     }
@@ -97,30 +96,29 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidAppear(_ animated: Bool) {
         
-//        if UserDefaults.standard.array(forKey: "bookmarklist") == nil{
-//            bookmarkListName = []
-//        }else {
-            bookmarkListName = UserDefaults.standard.array(forKey: "bookmarklist") as! [String]
-            if bookmarkListName.count != bookmarkFoodData.count{
-                if bookmarkListName.count > bookmarkFoodData.count {
-                    for i in bookmarkFoodData.count...bookmarkListName.count-1{
-                        for j in 0...foodData.count-1{
-                            if foodData[j].name == bookmarkListName[i]
-                            {
-                                bookmarkFoodData.append(foodData[j])
-                            }
-                        }
-                    }
-                } 
-                else{
-                    for (idx,data) in bookmarkFoodData.enumerated(){
-                        if !bookmarkListName.contains(data.name!){
-                            bookmarkFoodData.remove(at: idx)
+        if let bookmark = UserDefaults.standard.array(forKey: "bookmarklist") {
+            self.bookmarkListName = bookmark as! [String]
+        }
+        
+        if bookmarkListName.count != bookmarkFoodData.count{
+            if bookmarkListName.count > bookmarkFoodData.count {
+                for i in bookmarkFoodData.count...bookmarkListName.count-1{
+                    for j in 0...foodData.count-1{
+                        if foodData[j].name == bookmarkListName[i]
+                        {
+                            bookmarkFoodData.append(foodData[j])
                         }
                     }
                 }
             }
-//        }
+            else{
+                for (idx,data) in bookmarkFoodData.enumerated(){
+                    if !bookmarkListName.contains(data.name!){
+                        bookmarkFoodData.remove(at: idx)
+                    }
+                }
+            }
+        }
         
         tableView.reloadData()
     }
