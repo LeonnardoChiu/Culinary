@@ -101,6 +101,8 @@ extension DiscoverViewController: UICollectionViewDataSource, UICollectionViewDe
             
             cell.model = filteredFood![indexPath.row]
         }
+
+        cell.layoutIfNeeded()
         
         return cell
     }
