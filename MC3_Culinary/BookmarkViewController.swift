@@ -111,7 +111,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                             }
                         }
                     }
-                }
+                } 
                 else{
                     for (idx,data) in bookmarkFoodData.enumerated(){
                         if !bookmarkListName.contains(data.name!){
