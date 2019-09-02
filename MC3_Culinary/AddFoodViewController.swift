@@ -35,7 +35,12 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // Do any additional setup after loading the view.
     }
-    
+
+
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func btnAddPhotoClicked(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
