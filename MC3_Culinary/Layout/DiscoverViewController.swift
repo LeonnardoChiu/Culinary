@@ -20,15 +20,24 @@ class DiscoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(selectedCity)
-        
+
+        setupTitle()
+
         createData()
         filteredFood = foodData.filter({$0.origin?.name == selectedCity})
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
+
         
         setupCollectionView()
         collectionView.reloadData()
+    }
+
+    private func setupTitle(){
+        if selectedCity.count > 0 {
+            self.title = "Result of \(selectedCity)"
+        }
     }
     
     private func setupCollectionView() {
