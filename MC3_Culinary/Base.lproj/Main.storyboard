@@ -236,13 +236,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zla-N5-vbo">
-                                <rect key="frame" x="20" y="108" width="95" height="21"/>
+                                <rect key="frame" x="20" y="64" width="95" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQk-D8-f6c">
-                                <rect key="frame" x="20" y="354" width="374" height="30"/>
+                                <rect key="frame" x="20" y="310" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -251,7 +251,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xx8-WE-Bqv">
-                                <rect key="frame" x="20" y="399" width="374" height="30"/>
+                                <rect key="frame" x="20" y="355" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -260,7 +260,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Method" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-Cq-VOk">
-                                <rect key="frame" x="20" y="444" width="374" height="30"/>
+                                <rect key="frame" x="20" y="400" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -269,7 +269,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Sg-2k-997">
-                                <rect key="frame" x="20" y="489" width="374" height="30"/>
+                                <rect key="frame" x="20" y="445" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -278,13 +278,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-qu-MoZ">
-                                <rect key="frame" x="20" y="549" width="49" height="21"/>
+                                <rect key="frame" x="20" y="505" width="49" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Province" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-2I-ckC">
-                                <rect key="frame" x="20" y="585" width="374" height="30"/>
+                                <rect key="frame" x="20" y="541" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -293,7 +293,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phb-rE-m9P">
-                                <rect key="frame" x="20" y="630" width="374" height="30"/>
+                                <rect key="frame" x="20" y="586" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -302,13 +302,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w36-Mq-9bq">
-                                <rect key="frame" x="20" y="690" width="104" height="21"/>
+                                <rect key="frame" x="20" y="646" width="104" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oee-Sg-hjN">
-                                <rect key="frame" x="20" y="726" width="374" height="30"/>
+                                <rect key="frame" x="20" y="682" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -317,7 +317,7 @@
                                 </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PMX-gF-AeA">
-                                <rect key="frame" x="107" y="139" width="200" height="200"/>
+                                <rect key="frame" x="107" y="95" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="6Zi-eg-gcx"/>
                                     <constraint firstAttribute="width" constant="200" id="tTn-jh-OR3"/>
@@ -329,7 +329,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1s-zP-KjU">
-                                <rect key="frame" x="107" y="139" width="200" height="200"/>
+                                <rect key="frame" x="107" y="95" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="aGo-kw-5xY"/>
                                 </constraints>
@@ -381,7 +381,7 @@
                         <viewLayoutGuide key="safeArea" id="WzW-9j-qJj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Food" largeTitleDisplayMode="never" id="3xS-Tc-8F5">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="YSi-Oh-yqm">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="YSi-Oh-yqm">
                             <connections>
                                 <action selector="btnDoneClicked:" destination="IpH-bh-3Bz" id="XBJ-cx-qu6"/>
                             </connections>
@@ -484,7 +484,7 @@
                     <navigationItem key="navigationItem" title="Discover" id="4h1-md-9yh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lKD-gr-TFR">
                             <connections>
-                                <segue destination="IpH-bh-3Bz" kind="show" id="e6l-ER-iGX"/>
+                                <segue destination="IpH-bh-3Bz" kind="presentation" id="e6l-ER-iGX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

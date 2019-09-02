@@ -120,10 +120,14 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("LAGI SEARCHHHHH")
-        searchLocationFilter = searchLocationList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        searchFoodFilter = searchFoodList.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        isSearching = true
+        if searchBar.text == "" {
+            isSearching = false
+        }
+        else{
+            searchLocationFilter = searchLocationList.filter({$0.lowercased().contains(searchText.lowercased())})
+            searchFoodFilter = searchFoodList.filter({$0.lowercased().contains(searchText.lowercased())})
+            isSearching = true
+        }
         tableView.reloadData()
     }
     
