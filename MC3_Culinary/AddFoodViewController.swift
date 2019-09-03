@@ -11,7 +11,6 @@ import UIKit
 class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var btnDone: UIBarButtonItem!
-    @IBOutlet weak var viewImage: UIImageView!
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
     @IBOutlet weak var txtMethod: UITextField!
@@ -88,7 +87,14 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func btnDoneClicked(_ sender: Any) {
         //upload data
-        print("\(txtName.text!) \(txtDescription.text!) \(txtIngridients.text!) \(txtProvince.text!) \(txtCity.text!) \(txtEmail.text!)")
+        let alert = UIAlertController(title: "Terimakasih", message: "Kami akan mereview datamu dan akan mengabarimu melalui surel!", preferredStyle: .alert)
+
+        let okAlert = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+
+        alert.addAction(okAlert)
+        self.present(alert, animated: true, completion: nil)
+
+//        print("\(txtName.text!) \(txtDescription.text!) \(txtIngridients.text!) \(txtProvince.text!) \(txtCity.text!) \(txtEmail.text!)")
     }
     
     @IBAction func txtFoodNameEdited(_ sender: Any) {
@@ -141,6 +147,7 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func isTextFieldEmpty(){
+        print("editing")
         if (txtName.text == "" || txtDescription.text == "" || txtMethod.text == "" || txtIngridients.text == "" || txtProvince.text == "" || txtCity.text == "" || txtEmail.text == "" || imageUploaded == false){
             btnDone.isEnabled = false
         }

@@ -252,24 +252,36 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtFoodNameEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="so7-Vc-Gso"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="22T-H5-6aE">
                                                 <rect key="frame" x="20" y="311" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtDescriptionEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="wjJ-uC-HHf"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Method" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-IP-dVS">
                                                 <rect key="frame" x="20" y="356" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtMethodEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="GeZ-iY-097"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-Tx-4vr">
                                                 <rect key="frame" x="20" y="401" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtIngridientsEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="zl0-ZI-fms"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjo-QQ-ir5">
                                                 <rect key="frame" x="20" y="461" width="49" height="21"/>
@@ -282,12 +294,18 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtProvinceEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="pkm-ML-bcb"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hG0-6o-yTO">
                                                 <rect key="frame" x="20" y="542" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtCityEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="xoJ-x1-USD"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN4-mb-PVB">
                                                 <rect key="frame" x="20" y="602" width="104" height="21"/>
@@ -300,6 +318,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtEmailEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="8nz-yQ-YG4"/>
+                                                </connections>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-SP-rqW">
                                                 <rect key="frame" x="107" y="51" width="200" height="200"/>
@@ -313,12 +334,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOa-ts-6fH">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOa-ts-6fH">
                                                 <rect key="frame" x="107" y="51" width="200" height="200"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="jSp-vh-RAQ"/>
-                                                </constraints>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Add Photo"/>
+                                                <connections>
+                                                    <action selector="btnAddPhotoClicked:" destination="IpH-bh-3Bz" eventType="touchUpInside" id="AYv-3d-ykU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -335,12 +357,10 @@
                                             <constraint firstItem="22T-H5-6aE" firstAttribute="top" secondItem="9db-hC-O4D" secondAttribute="bottom" constant="15" id="EdA-89-Wx8"/>
                                             <constraint firstItem="aRI-SP-rqW" firstAttribute="leading" secondItem="fPt-Hn-XqK" secondAttribute="leading" constant="107" id="Fkn-SG-pv0"/>
                                             <constraint firstItem="hG0-6o-yTO" firstAttribute="leading" secondItem="fPt-Hn-XqK" secondAttribute="leading" constant="20" id="HVK-Pc-Fvq"/>
-                                            <constraint firstItem="fPt-Hn-XqK" firstAttribute="trailing" secondItem="EOa-ts-6fH" secondAttribute="trailing" constant="107" id="I3Z-MQ-3eS"/>
                                             <constraint firstItem="Tjo-QQ-ir5" firstAttribute="leading" secondItem="fPt-Hn-XqK" secondAttribute="leading" constant="20" id="I86-n1-PXa"/>
                                             <constraint firstItem="hG0-6o-yTO" firstAttribute="top" secondItem="jNq-5X-bWH" secondAttribute="bottom" constant="15" id="IAe-66-fka"/>
                                             <constraint firstItem="jNq-5X-bWH" firstAttribute="top" secondItem="Tjo-QQ-ir5" secondAttribute="bottom" constant="15" id="INg-k9-TTg"/>
                                             <constraint firstItem="aRI-SP-rqW" firstAttribute="top" secondItem="n7D-vg-5Y7" secondAttribute="bottom" constant="10" id="LE6-Rm-kfT"/>
-                                            <constraint firstItem="EOa-ts-6fH" firstAttribute="leading" secondItem="fPt-Hn-XqK" secondAttribute="leading" constant="107" id="Lh8-Ug-ZuC"/>
                                             <constraint firstItem="Lup-Tx-4vr" firstAttribute="leading" secondItem="fPt-Hn-XqK" secondAttribute="leading" constant="20" id="Odh-Ap-A2s"/>
                                             <constraint firstItem="fPt-Hn-XqK" firstAttribute="trailing" secondItem="aRI-SP-rqW" secondAttribute="trailing" constant="107" id="Q4U-xj-Ptr"/>
                                             <constraint firstItem="GN4-mb-PVB" firstAttribute="top" secondItem="hG0-6o-yTO" secondAttribute="bottom" constant="30" id="Q4s-gE-zEQ"/>
@@ -358,7 +378,6 @@
                                             <constraint firstItem="n7D-vg-5Y7" firstAttribute="top" secondItem="fPt-Hn-XqK" secondAttribute="top" constant="20" id="mvq-FG-USl"/>
                                             <constraint firstItem="jNq-5X-bWH" firstAttribute="leading" secondItem="fPt-Hn-XqK" secondAttribute="leading" constant="20" id="qaw-6d-z4P"/>
                                             <constraint firstItem="fPt-Hn-XqK" firstAttribute="trailing" secondItem="9db-hC-O4D" secondAttribute="trailing" constant="20" id="vkR-Mz-PCd"/>
-                                            <constraint firstItem="EOa-ts-6fH" firstAttribute="top" secondItem="n7D-vg-5Y7" secondAttribute="bottom" constant="10" id="w3d-tB-Xsi"/>
                                             <constraint firstItem="fPt-Hn-XqK" firstAttribute="trailing" secondItem="22T-H5-6aE" secondAttribute="trailing" constant="20" id="yfY-ch-PQI"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="fPt-Hn-XqK"/>
@@ -389,12 +408,21 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="YSi-Oh-yqm">
                             <connections>
-                                <action selector="btnDoneClicked:" destination="IpH-bh-3Bz" id="XBJ-cx-qu6"/>
+                                <action selector="btnDoneClicked:" destination="IpH-bh-3Bz" id="LbJ-y1-cQK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnAddPhoto" destination="EOa-ts-6fH" id="Omt-eE-pGe"/>
                         <outlet property="btnDone" destination="YSi-Oh-yqm" id="Us5-Ej-6oo"/>
+                        <outlet property="imgView" destination="aRI-SP-rqW" id="r3R-SG-Qqb"/>
+                        <outlet property="txtCity" destination="hG0-6o-yTO" id="gsz-QE-NC5"/>
+                        <outlet property="txtDescription" destination="22T-H5-6aE" id="CKs-sX-nIs"/>
+                        <outlet property="txtEmail" destination="icg-Is-Mu0" id="hjN-2x-sIj"/>
+                        <outlet property="txtIngridients" destination="Lup-Tx-4vr" id="dtE-kT-CEa"/>
+                        <outlet property="txtMethod" destination="VmG-IP-dVS" id="Nao-Jj-vqc"/>
+                        <outlet property="txtName" destination="9db-hC-O4D" id="XCN-cD-0e9"/>
+                        <outlet property="txtProvince" destination="jNq-5X-bWH" id="h34-Bx-rkE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0m-KW-btG" userLabel="First Responder" sceneMemberID="firstResponder"/>
