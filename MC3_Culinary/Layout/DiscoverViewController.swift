@@ -38,6 +38,7 @@ class DiscoverViewController: UIViewController {
         if selectedCity.count > 0 {
             self.title = selectedCity
             self.navigationItem.rightBarButtonItem?.isEnabled = false
+            self.navigationController?.navigationBar.prefersLargeTitles = false
         }
     }
     

@@ -50,8 +50,9 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         var originName = model?.origin?.province.locationImage
         originLocation.image = UIImage (named: originName!)
         
-        title = model?.name
-        
+//        title = model?.name
+        title = ""
+
         pageControl.numberOfPages = model!.images!.count
         for index in 0..<model!.images!.count{
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
