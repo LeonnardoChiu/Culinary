@@ -747,12 +747,19 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qpu-4t-quf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ma6-RT-jR6"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="BookmarkNonIsi" style="plain" id="8If-1q-zea">
-                            <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="VLe-ID-CjF"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="BookmarkNonIsi" style="plain" id="8If-1q-zea">
+                                <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="VLe-ID-CjF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Location" image="lokasi" id="1cJ-mq-6s2">
+                                <connections>
+                                    <action selector="locTapped:" destination="dnx-XJ-QpJ" id="ZmW-Hs-Ag7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="factDetail" destination="hn4-dt-QzE" id="OM3-6n-9gj"/>
@@ -793,6 +800,7 @@
         <image name="BookmarkNonIsi" width="30" height="25"/>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
         <image name="cari" width="23" height="25"/>
+        <image name="lokasi" width="17" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Dk-gd-1Xq"/>
