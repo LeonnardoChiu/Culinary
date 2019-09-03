@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bookmarks-->
+        <!--Penanda-->
         <scene sceneID="aBj-nv-HPc">
             <objects>
                 <navigationController id="jtt-su-U69" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bookmarks" image="BookmarkIsi" id="auf-kp-T2a"/>
+                    <tabBarItem key="tabBarItem" title="Penanda" image="BookmarkIsi" id="auf-kp-T2a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Kc-Vy-d7t">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-530" y="92"/>
         </scene>
-        <!--Bookmark-->
+        <!--Penanda-->
         <scene sceneID="BfZ-DJ-ljP">
             <objects>
                 <viewController id="ZEP-BA-fih" customClass="BookmarkViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,8 +100,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N8m-m2-ztt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bookmark" id="iN2-lw-uKV">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="NT8-9P-rI0">
+                    <navigationItem key="navigationItem" title="Penanda" id="iN2-lw-uKV">
+                        <barButtonItem key="rightBarButtonItem" title="Sunting" id="NT8-9P-rI0">
                             <connections>
                                 <action selector="btnEditClicked:" destination="ZEP-BA-fih" id="vkR-WP-NA4"/>
                             </connections>
@@ -115,11 +115,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="91.741071428571431"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Cari-->
         <scene sceneID="BI1-jD-BG7">
             <objects>
                 <navigationController id="Na1-wN-fMH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="OKJ-UG-531"/>
+                    <tabBarItem key="tabBarItem" title="Cari" image="cari" id="OKJ-UG-531" customClass="CariTabBarItem" customModule="MC3_Culinary" customModuleProvider="target"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PTh-T5-Gq5">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="-530" y="954"/>
         </scene>
-        <!--Search-->
+        <!--Pencarian-->
         <scene sceneID="VnE-lb-gmX">
             <objects>
                 <viewController id="3sI-86-bOP" customClass="SearchViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,6 +145,10 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="barTintColor" red="0.94901960780000005" green="0.66666666669999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="3sI-86-bOP" id="Y4g-pS-pea"/>
                                 </connections>
@@ -153,15 +157,15 @@
                                 <rect key="frame" x="0.0" y="196" width="414" height="617"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="gKB-yh-tyz" style="IBUITableViewCellStyleDefault" id="jFy-eT-uFT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="gKB-yh-tyz" style="IBUITableViewCellStyleDefault" id="jFy-eT-uFT">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jFy-eT-uFT" id="uJh-K2-LhT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gKB-yh-tyz">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -189,7 +193,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hn4-ky-h44"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="4Kv-aT-Yrm"/>
+                    <navigationItem key="navigationItem" title="Pencarian" id="4Kv-aT-Yrm"/>
                     <connections>
                         <outlet property="searchBar" destination="3t6-Qw-5ZN" id="IeI-P6-sZs"/>
                         <outlet property="searchDisplayController" destination="zOI-RQ-du6" id="ko8-No-Xnm"/>
@@ -210,11 +214,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="953.57142857142856"/>
         </scene>
-        <!--Discovery-->
+        <!--Beranda-->
         <scene sceneID="xEG-5B-6oc">
             <objects>
                 <navigationController id="vaa-RF-ZpX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discovery" image="DiscoverTabBarDisable" id="KSR-O5-8Zg"/>
+                    <tabBarItem key="tabBarItem" title="Beranda" image="DiscoverTabBarDisable" id="KSR-O5-8Zg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hm7-44-RMb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -241,13 +245,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMZ-aD-NLu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="885"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-vg-5Y7">
-                                                <rect key="frame" x="20" y="20" width="95" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Makanan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-vg-5Y7">
+                                                <rect key="frame" x="20" y="20" width="114" height="21"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9db-hC-O4D">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama makanan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9db-hC-O4D">
                                                 <rect key="frame" x="20" y="266" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -256,7 +260,7 @@
                                                     <action selector="txtFoodNameEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="so7-Vc-Gso"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="22T-H5-6aE">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Deskripsi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="22T-H5-6aE">
                                                 <rect key="frame" x="20" y="311" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -265,7 +269,7 @@
                                                     <action selector="txtDescriptionEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="wjJ-uC-HHf"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Method" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-IP-dVS">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cara masak, penyajian dan makan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmG-IP-dVS">
                                                 <rect key="frame" x="20" y="356" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -274,7 +278,7 @@
                                                     <action selector="txtMethodEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="GeZ-iY-097"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredients" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-Tx-4vr">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bahan utama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lup-Tx-4vr">
                                                 <rect key="frame" x="20" y="401" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -283,13 +287,13 @@
                                                     <action selector="txtIngridientsEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="zl0-ZI-fms"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjo-QQ-ir5">
-                                                <rect key="frame" x="20" y="461" width="49" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjo-QQ-ir5">
+                                                <rect key="frame" x="20" y="461" width="35" height="21"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Province" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNq-5X-bWH">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provinsi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNq-5X-bWH">
                                                 <rect key="frame" x="20" y="497" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -298,7 +302,7 @@
                                                     <action selector="txtProvinceEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="pkm-ML-bcb"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hG0-6o-yTO">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kota" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hG0-6o-yTO">
                                                 <rect key="frame" x="20" y="542" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -307,13 +311,13 @@
                                                     <action selector="txtCityEdited:" destination="IpH-bh-3Bz" eventType="editingDidEnd" id="xoJ-x1-USD"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer's Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN4-mb-PVB">
-                                                <rect key="frame" x="20" y="602" width="104" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data pengirim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN4-mb-PVB">
+                                                <rect key="frame" x="20" y="602" width="112" height="21"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.39607843139999999" green="0.12549019610000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icg-Is-Mu0">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alamat surel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icg-Is-Mu0">
                                                 <rect key="frame" x="20" y="638" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -337,7 +341,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOa-ts-6fH">
                                                 <rect key="frame" x="107" y="51" width="200" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Add Photo"/>
+                                                <state key="normal" title="Tambah Foto"/>
                                                 <connections>
                                                     <action selector="btnAddPhotoClicked:" destination="IpH-bh-3Bz" eventType="touchUpInside" id="AYv-3d-ykU"/>
                                                 </connections>
@@ -400,13 +404,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WzW-9j-qJj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Food" largeTitleDisplayMode="never" id="3xS-Tc-8F5">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="j3W-xP-84g">
+                    <navigationItem key="navigationItem" title="Tambah" largeTitleDisplayMode="never" id="3xS-Tc-8F5">
+                        <barButtonItem key="leftBarButtonItem" title="Batal" id="j3W-xP-84g">
                             <connections>
                                 <action selector="cancelTapped:" destination="IpH-bh-3Bz" id="zR4-54-Twt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="YSi-Oh-yqm">
+                        <barButtonItem key="rightBarButtonItem" title="Kirim" id="YSi-Oh-yqm">
                             <connections>
                                 <action selector="btnDoneClicked:" destination="IpH-bh-3Bz" id="LbJ-y1-cQK"/>
                             </connections>
@@ -448,7 +452,7 @@
             </objects>
             <point key="canvasLocation" x="-1451" y="93"/>
         </scene>
-        <!--Discover-->
+        <!--Beranda-->
         <scene sceneID="aPu-8C-fOf">
             <objects>
                 <viewController storyboardIdentifier="DiscoverViewController" id="XgJ-Vl-RRd" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
@@ -505,7 +509,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wts-lN-u30"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Discover" id="4h1-md-9yh">
+                    <navigationItem key="navigationItem" title="Beranda" id="4h1-md-9yh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lKD-gr-TFR">
                             <connections>
                                 <segue destination="NeK-YT-rhK" kind="presentation" id="e6l-ER-iGX"/>
@@ -598,7 +602,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qb-kd-7Sg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-nh-lbS" userLabel="FunFact">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fakta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-nh-lbS" userLabel="FunFact">
                                                 <rect key="frame" x="20" y="9" width="92" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="92" id="GbJ-9z-Y6l"/>
@@ -613,8 +617,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLO-rz-AIA" userLabel="Ingredient">
-                                                <rect key="frame" x="20" y="100.5" width="114" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bahan Utama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLO-rz-AIA" userLabel="Ingredient">
+                                                <rect key="frame" x="20" y="101" width="184" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="114" id="Rrk-B3-BzB"/>
                                                 </constraints>
@@ -647,8 +651,8 @@
                                                     <constraint firstAttribute="height" constant="1" id="cgh-MT-IvV"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-uL-Ie6" userLabel="Method">
-                                                <rect key="frame" x="20" y="192" width="184" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cara masak, penyajian dan masak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-uL-Ie6" userLabel="Method">
+                                                <rect key="frame" x="20" y="192" width="367" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <color key="textColor" red="0.396078431372549" green="0.12549019607843137" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -691,14 +695,14 @@
                                             <constraint firstItem="v6z-fv-u1b" firstAttribute="top" secondItem="8qb-kd-7Sg" secondAttribute="top" id="QUk-PX-Y5M"/>
                                             <constraint firstAttribute="trailing" secondItem="hJP-nh-lbS" secondAttribute="trailing" constant="302" id="R61-dy-C5r"/>
                                             <constraint firstItem="Y50-LD-tHR" firstAttribute="leading" secondItem="8qb-kd-7Sg" secondAttribute="leading" constant="20" id="TUL-9x-Fsf"/>
-                                            <constraint firstAttribute="trailing" secondItem="WLO-rz-AIA" secondAttribute="trailing" constant="280" id="Ujo-GF-Btq"/>
+                                            <constraint firstAttribute="trailing" secondItem="WLO-rz-AIA" secondAttribute="trailing" constant="200" id="Ujo-GF-Btq"/>
                                             <constraint firstItem="v6z-fv-u1b" firstAttribute="leading" secondItem="8qb-kd-7Sg" secondAttribute="leading" constant="20" id="Wve-9P-mXb"/>
                                             <constraint firstItem="Chn-uL-Ie6" firstAttribute="top" secondItem="YOF-E1-nyS" secondAttribute="bottom" constant="8" id="Z7H-ux-rsx"/>
                                             <constraint firstAttribute="trailing" secondItem="YOF-E1-nyS" secondAttribute="trailing" id="acQ-H9-RjI"/>
                                             <constraint firstItem="wQ5-YP-xMO" firstAttribute="leading" secondItem="8qb-kd-7Sg" secondAttribute="leading" constant="20" id="cBx-wi-fto"/>
                                             <constraint firstItem="hJP-nh-lbS" firstAttribute="top" secondItem="v6z-fv-u1b" secondAttribute="bottom" constant="8" id="e5K-HV-6Pa"/>
                                             <constraint firstItem="yyN-tm-ovb" firstAttribute="top" secondItem="Chn-uL-Ie6" secondAttribute="bottom" constant="8" id="f5f-4W-JSM"/>
-                                            <constraint firstAttribute="trailing" secondItem="Chn-uL-Ie6" secondAttribute="trailing" constant="210" id="gyv-cf-1bn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Chn-uL-Ie6" secondAttribute="trailing" id="gyv-cf-1bn"/>
                                             <constraint firstItem="hn4-dt-QzE" firstAttribute="leading" secondItem="8qb-kd-7Sg" secondAttribute="leading" constant="20" id="lL9-sf-MNI"/>
                                             <constraint firstItem="FwD-bP-JDY" firstAttribute="leading" secondItem="8qb-kd-7Sg" secondAttribute="leading" constant="20" id="lYu-X3-RxL"/>
                                             <constraint firstItem="YOF-E1-nyS" firstAttribute="leading" secondItem="8qb-kd-7Sg" secondAttribute="leading" constant="20" id="m5U-Ev-Iqg"/>
@@ -750,12 +754,19 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qpu-4t-quf">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ma6-RT-jR6"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Combined Shape" style="plain" id="8If-1q-zea">
-                            <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="VLe-ID-CjF"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="BookmarkNonIsi" style="plain" id="8If-1q-zea">
+                                <color key="tintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="VLe-ID-CjF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Location" image="lokasi" id="1cJ-mq-6s2">
+                                <connections>
+                                    <action selector="locTapped:" destination="dnx-XJ-QpJ" id="ZmW-Hs-Ag7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="factDetail" destination="hn4-dt-QzE" id="OM3-6n-9gj"/>
@@ -793,8 +804,10 @@
     </scenes>
     <resources>
         <image name="BookmarkIsi" width="30" height="25"/>
-        <image name="Combined Shape" width="25" height="25"/>
+        <image name="BookmarkNonIsi" width="30" height="25"/>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
+        <image name="cari" width="23" height="25"/>
+        <image name="lokasi" width="17" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Dk-gd-1Xq"/>

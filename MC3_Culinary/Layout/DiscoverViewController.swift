@@ -36,7 +36,9 @@ class DiscoverViewController: UIViewController {
 
     private func setupTitle(){
         if selectedCity.count > 0 {
-            self.title = "Result of \(selectedCity)"
+            self.title = selectedCity
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+            self.navigationController?.navigationBar.prefersLargeTitles = false
         }
     }
     

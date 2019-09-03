@@ -50,8 +50,9 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         var originName = model?.origin?.province.locationImage
         originLocation.image = UIImage (named: originName!)
         
-        title = model?.name
-        
+//        title = model?.name
+        title = ""
+
         pageControl.numberOfPages = model!.images!.count
         for index in 0..<model!.images!.count{
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
@@ -75,7 +76,20 @@ class PageDetailViewController: UIViewController, UIScrollViewDelegate {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.width
         pageControl.currentPage = Int(pageNumber)
     }
-    
+
+    @IBAction func locTapped(_ sender: UIButton){
+        searchRestaurant()
+    }
+
+    private func searchRestaurant(){
+        var search = model?.name
+        search = search?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+
+        if let query = search {
+            UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/search/\(query)")!)
+        }
+    }
+
     @IBAction func addBookmark(_ sender: Any) {
 //        let bookmarkVC : BookmarkViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bookmarkVC") as! BookmarkViewController
 //        bookmarkVC.bookmarkFoodData = [TraditionalFoodModel(name: foodNameDetail.text!, images: ["\(model!.images!)"], fact: factDetail.text!, ingredient: ingredientDetail.text!, method: methodDetail.text!, origin: model!.origin!)]
