@@ -89,7 +89,7 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
         //upload data
         let alert = UIAlertController(title: "Terimakasih", message: "Kami akan mereview datamu dan akan mengabarimu melalui surel!", preferredStyle: .alert)
 
-        let okAlert = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let okAlert = UIAlertAction(title: "Tutup", style: .cancel, handler: nil)
 
         alert.addAction(okAlert)
         self.present(alert, animated: true, completion: nil)
