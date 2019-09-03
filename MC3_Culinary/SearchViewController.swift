@@ -69,10 +69,10 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Location"
+            return "Lokasi"
         }
         else{
-            return "Food"
+            return "Makanan"
         }
     }
     
