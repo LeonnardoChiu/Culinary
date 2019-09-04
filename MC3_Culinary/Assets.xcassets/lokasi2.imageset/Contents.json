@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "lokasi.png",
+      "filename" : "lokasi2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lokasi@2x.png",
+      "filename" : "lokasi2@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lokasi@3x.png",
+      "filename" : "lokasi2@3x.png",
       "scale" : "3x"
     }
   ],

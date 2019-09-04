@@ -140,10 +140,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Makanan, Lokasi" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3t6-Qw-5ZN">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Lokasi, Makanan" translatesAutoresizingMaskIntoConstraints="NO" id="3t6-Qw-5ZN">
                                 <rect key="frame" x="0.0" y="140" width="414" height="56"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.94901960780000005" green="0.66666666669999997" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -214,11 +214,11 @@
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="953.57142857142856"/>
         </scene>
-        <!--Beranda-->
+        <!--Jelajah-->
         <scene sceneID="xEG-5B-6oc">
             <objects>
                 <navigationController id="vaa-RF-ZpX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Beranda" image="DiscoverTabBarDisable" id="KSR-O5-8Zg"/>
+                    <tabBarItem key="tabBarItem" title="Jelajah" image="DiscoverTabBarDisable" id="KSR-O5-8Zg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hm7-44-RMb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -452,7 +452,7 @@
             </objects>
             <point key="canvasLocation" x="-1451" y="93"/>
         </scene>
-        <!--Beranda-->
+        <!--Jelajah-->
         <scene sceneID="aPu-8C-fOf">
             <objects>
                 <viewController storyboardIdentifier="DiscoverViewController" id="XgJ-Vl-RRd" customClass="DiscoverViewController" customModule="MC3_Culinary" customModuleProvider="target" sceneMemberID="viewController">
@@ -509,7 +509,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wts-lN-u30"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Beranda" id="4h1-md-9yh">
+                    <navigationItem key="navigationItem" title="Jelajah" id="4h1-md-9yh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lKD-gr-TFR">
                             <connections>
                                 <segue destination="NeK-YT-rhK" kind="presentation" id="e6l-ER-iGX"/>
@@ -761,7 +761,7 @@
                                     <action selector="addBookmark:" destination="dnx-XJ-QpJ" id="VLe-ID-CjF"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Location" image="lokasi" id="1cJ-mq-6s2">
+                            <barButtonItem title="Location" image="lokasi2" id="1cJ-mq-6s2">
                                 <connections>
                                     <action selector="locTapped:" destination="dnx-XJ-QpJ" id="ZmW-Hs-Ag7"/>
                                 </connections>
@@ -807,7 +807,7 @@
         <image name="BookmarkNonIsi" width="30" height="25"/>
         <image name="DiscoverTabBarDisable" width="25" height="25"/>
         <image name="cari" width="23" height="25"/>
-        <image name="lokasi" width="17" height="23"/>
+        <image name="lokasi2" width="27" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3Dk-gd-1Xq"/>

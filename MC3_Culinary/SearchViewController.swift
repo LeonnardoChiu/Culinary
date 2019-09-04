@@ -27,6 +27,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         createData()
 
+//        searchBar.showsCancelButton = false
         self.hideKeyboardWhenTappedAround()
         
         // Do any additional setup after loading the view.
